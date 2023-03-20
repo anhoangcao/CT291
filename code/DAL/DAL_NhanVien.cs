@@ -31,6 +31,38 @@ namespace DAL
             }
         }
 
+        // Thêm nhân viên
+        public bool insertStaff(DTO_NhanVien staff)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                SqlCommand comd = new SqlCommand("InsertofStaff", conn);
+                comd.CommandType = CommandType.StoredProcedure;
+                comd.Parameters.AddWithValue("manv", staff.MaNV);
+                comd.Parameters.AddWithValue("tennv", staff.HoTen);
+                comd.Parameters.AddWithValue("ngaysinh", staff.NgaySinh);
+                comd.Parameters.AddWithValue("gioitinh", staff.GioiTinh);               
+                comd.Parameters.AddWithValue("diachi", staff.DiaChi);               
+                comd.Parameters.AddWithValue("dienthoai", staff.DienThoai);
+                if (comd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return false;
+        }
+
     }
     
 }

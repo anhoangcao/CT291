@@ -16,5 +16,10 @@ namespace BLL
         {
             return dalnhanvien.ListNhanVien();
         }
+
+        public bool insertStaff(DTO_NhanVien staff)
+        {
+            return dalnhanvien.insertStaff(staff);
+        }
     }
 }

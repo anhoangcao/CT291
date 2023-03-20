@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace GUI
 {
     public partial class formNhanVien : Form
     {
+        BLL_NhanVien bllstaff = new BLL_NhanVien();
+        DTO_NhanVien dto_NhanVien;
         public formNhanVien()
         {
             InitializeComponent();
@@ -50,16 +53,71 @@ namespace GUI
                 item.DividerWidth = 1;
 
         }
-        BLL_NhanVien bllnhanvien = new BLL_NhanVien();
+
         private void formNhanVien_Load(object sender, EventArgs e)
         {
-            dtgvNhanVien.DataSource = bllnhanvien.List_NhanVien();
+            dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
             LoadGridView();
         }
 
+        private void MessBox(string message, bool isError = false)
+        {
+            if (isError)
+                MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            dto_NhanVien = new DTO_NhanVien
+            (
+                txtMaNV.Text,
+                txtHoTenNV.Text,
+                Convert.ToDateTime(btnDOB.Value),
+                cbxGT.SelectedValue.ToString(),
+                txtDiaChi.Text,
+                txtSDT.Text
+
+            );
+            if (bllstaff.insertStaff(dto_NhanVien))
+            {
+                dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
+                LoadGridView();
+                MessBox("Thêm nhân viên thành công");
+            }
+            else
+            {
+                MessBox("Thêm vật tư không được", true);
+            }
+        }
         private void dtgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvNhanVien.Rows.Count > 0)
+            {
+                //btnUpdate.Enabled = true;
+                // btnDelete.Enabled = true;
+                txtMaNV.ReadOnly = true;
+                txtMaNV.Text = dtgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                txtHoTenNV.Text = dtgvNhanVien.CurrentRow.Cells[1].Value.ToString();
+                btnDOB.Text = dtgvNhanVien.CurrentRow.Cells[2].Value.ToString();
+                cbxGT.Text = dtgvNhanVien.CurrentRow.Cells[3].Value.ToString();
+                txtDiaChi.Text = dtgvNhanVien.CurrentRow.Cells[4].Value.ToString();
+                txtHoTenNV.Text = dtgvNhanVien.CurrentRow.Cells[5].Value.ToString();
+
+
+
+            }
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-    }
+
+        private void guna2ComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+    }  
 }
