@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -53,9 +53,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnDOB = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbxGT = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDOB = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -197,37 +197,37 @@
             // 
             // dtgvNhanVien
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dtgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            this.dtgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dtgvNhanVien.ColumnHeadersHeight = 30;
             this.dtgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvNhanVien.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvNhanVien.DefaultCellStyle = dataGridViewCellStyle31;
             this.dtgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvNhanVien.Location = new System.Drawing.Point(78, 310);
             this.dtgvNhanVien.Name = "dtgvNhanVien";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dtgvNhanVien.RowHeadersVisible = false;
             this.dtgvNhanVien.Size = new System.Drawing.Size(744, 190);
             this.dtgvNhanVien.TabIndex = 55;
@@ -442,38 +442,22 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "SĐT";
             // 
-            // btnDOB
-            // 
-            this.btnDOB.BorderRadius = 4;
-            this.btnDOB.Checked = true;
-            this.btnDOB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDOB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnDOB.ForeColor = System.Drawing.Color.White;
-            this.btnDOB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.btnDOB.Location = new System.Drawing.Point(127, 149);
-            this.btnDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.btnDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.btnDOB.Name = "btnDOB";
-            this.btnDOB.Size = new System.Drawing.Size(194, 31);
-            this.btnDOB.TabIndex = 43;
-            this.btnDOB.Value = new System.DateTime(2023, 3, 17, 12, 6, 55, 376);
-            // 
             // cbxGT
             // 
             this.cbxGT.BackColor = System.Drawing.Color.Transparent;
             this.cbxGT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.cbxGT.BorderRadius = 4;
+            this.cbxGT.BorderRadius = 2;
             this.cbxGT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxGT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbxGT.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbxGT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxGT.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbxGT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbxGT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxGT.ForeColor = System.Drawing.Color.White;
             this.cbxGT.ItemHeight = 30;
             this.cbxGT.Items.AddRange(new object[] {
             "Nam",
-            "Nu"});
+            "Nữ"});
             this.cbxGT.Location = new System.Drawing.Point(538, 43);
             this.cbxGT.Name = "cbxGT";
             this.cbxGT.Size = new System.Drawing.Size(120, 36);
@@ -506,6 +490,22 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(744, 193);
             this.guna2GroupBox1.TabIndex = 34;
             this.guna2GroupBox1.Text = "Quản lý nhân viên";
+            // 
+            // btnDOB
+            // 
+            this.btnDOB.BorderRadius = 4;
+            this.btnDOB.Checked = true;
+            this.btnDOB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDOB.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnDOB.ForeColor = System.Drawing.Color.White;
+            this.btnDOB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.btnDOB.Location = new System.Drawing.Point(127, 149);
+            this.btnDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.btnDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.btnDOB.Name = "btnDOB";
+            this.btnDOB.Size = new System.Drawing.Size(194, 31);
+            this.btnDOB.TabIndex = 43;
+            this.btnDOB.Value = new System.DateTime(2023, 3, 17, 12, 6, 55, 376);
             // 
             // formNhanVien
             // 
@@ -559,8 +559,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2DateTimePicker btnDOB;
         private Guna.UI2.WinForms.Guna2ComboBox cbxGT;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker btnDOB;
     }
 }

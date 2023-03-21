@@ -38,14 +38,15 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("InsertofStaff", conn);
-                comd.CommandType = CommandType.StoredProcedure;
-                comd.Parameters.AddWithValue("manv", staff.MaNV);
-                comd.Parameters.AddWithValue("tennv", staff.HoTen);
-                comd.Parameters.AddWithValue("ngaysinh", staff.NgaySinh);
-                comd.Parameters.AddWithValue("gioitinh", staff.GioiTinh);               
-                comd.Parameters.AddWithValue("diachi", staff.DiaChi);               
-                comd.Parameters.AddWithValue("dienthoai", staff.DienThoai);
+                string sql = "INSERT INTO dbo.NhanVien (MaNhanVien, TenNhanVien, NgaySinh, GioiTinh, DiaChi, DienThoai) VALUES (@MaNhanVien, @TenNhanVien, @NgaySinh, @GioiTinh, @DiaChi, @DienThoai)";
+                SqlCommand comd = new SqlCommand(sql, conn);
+                //comd.CommandType = CommandType.StoredProcedure;
+                comd.Parameters.AddWithValue("@MaNhanVien", staff.MaNV);
+                comd.Parameters.AddWithValue("@TenNhanVien", staff.HoTen);
+                comd.Parameters.AddWithValue("@NgaySinh", staff.NgaySinh);
+                comd.Parameters.AddWithValue("@GioiTinh", staff.GioiTinh);               
+                comd.Parameters.AddWithValue("@DiaChi", staff.DiaChi);               
+                comd.Parameters.AddWithValue("@DienThoai", staff.DienThoai);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else

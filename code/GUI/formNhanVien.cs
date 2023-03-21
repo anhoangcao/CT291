@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using DTO;
 using Guna.UI2.WinForms;
 using System;
@@ -9,7 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace GUI
 {
@@ -68,28 +69,56 @@ namespace GUI
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // Thêm Nhân viên
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             dto_NhanVien = new DTO_NhanVien
             (
                 txtMaNV.Text,
                 txtHoTenNV.Text,
-                Convert.ToDateTime(btnDOB.Value),
-                cbxGT.SelectedValue.ToString(),
+                btnDOB.Value,
+                cbxGT.Text,
                 txtDiaChi.Text,
                 txtSDT.Text
-
             );
-            if (bllstaff.insertStaff(dto_NhanVien))
+            try
             {
-                dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
-                LoadGridView();
-                MessBox("Thêm nhân viên thành công");
+                // Validate dữ liệu trước khi thực hiện thao tác
+                if (string.IsNullOrEmpty(dto_NhanVien.MaNV))
+                {
+                    throw new Exception("Mã nhân viên không được để trống");
+                }
+                if (string.IsNullOrEmpty(dto_NhanVien.HoTen))
+                {
+                    throw new Exception("Họ tên không được để trống");
+                }
+                if (string.IsNullOrEmpty(dto_NhanVien.DienThoai))
+                {
+                    throw new Exception("Số điện thoại không được để trống");
+                }
+                if (bllstaff.insertStaff(dto_NhanVien))
+                {
+                    dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
+                    LoadGridView();
+                    MessBox("Thêm nhân viên thành công");
+                }
+                else
+                {
+                    MessBox("Thêm nhân viên không thành công", true);
+                }   
+                // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
+                txtMaNV.Clear();
+                txtHoTenNV.Clear();
+                btnDOB.Value = DateTime.Today;
+                cbxGT.SelectedIndex = -1;
+                txtDiaChi.Clear();
+                txtSDT.Clear();
             }
-            else
+            catch (Exception ex)
             {
-                MessBox("Thêm vật tư không được", true);
+                MessageBox.Show(ex.Message);
             }
+            
         }
         private void dtgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,12 +127,14 @@ namespace GUI
                 //btnUpdate.Enabled = true;
                 // btnDelete.Enabled = true;
                 txtMaNV.ReadOnly = true;
-                txtMaNV.Text = dtgvNhanVien.CurrentRow.Cells[0].Value.ToString();
-                txtHoTenNV.Text = dtgvNhanVien.CurrentRow.Cells[1].Value.ToString();
-                btnDOB.Text = dtgvNhanVien.CurrentRow.Cells[2].Value.ToString();
-                cbxGT.Text = dtgvNhanVien.CurrentRow.Cells[3].Value.ToString();
-                txtDiaChi.Text = dtgvNhanVien.CurrentRow.Cells[4].Value.ToString();
-                txtHoTenNV.Text = dtgvNhanVien.CurrentRow.Cells[5].Value.ToString();
+                int i;
+                i = dtgvNhanVien.CurrentRow.Index;
+                txtMaNV.Text = dtgvNhanVien.Rows[i].Cells[0].Value.ToString();
+                txtHoTenNV.Text = dtgvNhanVien.Rows[i].Cells[1].Value.ToString();
+                btnDOB.Text = dtgvNhanVien.Rows[i].Cells[2].Value.ToString();
+                cbxGT.Text = dtgvNhanVien.Rows[i].Cells[3].Value.ToString();
+                txtDiaChi.Text = dtgvNhanVien.Rows[i].Cells[4].Value.ToString();
+                txtSDT.Text = dtgvNhanVien.Rows[i].Cells[5].Value.ToString();
 
 
 
