@@ -122,6 +122,25 @@ namespace DAL
             }
             return false;
         }
+
+        public DataTable searchStaff(String nv)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                SqlCommand comd = new SqlCommand("searchStaff", conn);
+                comd.CommandType = CommandType.StoredProcedure;
+                comd.Parameters.AddWithValue("HoTen", nv);
+                DataTable data = new DataTable();
+                data.Load(comd.ExecuteReader());
+                return data;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
     
 }

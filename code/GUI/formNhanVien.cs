@@ -207,5 +207,24 @@ namespace GUI
             txtDiaChi.Text = null;
             txtSDT.Text = null;
         }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchNV_Click(object sender, EventArgs e)
+        {
+            string nv = txtSearchNV.Text;
+            if (nv == "")
+            {
+                formNhanVien_Load(sender, e);
+            }
+            else
+            {
+                DataTable table = bllstaff.searchStaff(nv);
+                dtgvNhanVien.DataSource = table;
+            }
+        }
     }  
 }

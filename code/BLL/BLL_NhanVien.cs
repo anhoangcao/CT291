@@ -32,5 +32,10 @@ namespace BLL
             return dalnhanvien.deleteStaff(MaNV);
         }
 
+        public DataTable searchStaff(string nv)
+        {
+            return dalnhanvien.searchStaff(nv);
+        }
+
     }
 }
