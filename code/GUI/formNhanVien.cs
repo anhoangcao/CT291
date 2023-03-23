@@ -1,5 +1,4 @@
 ﻿using BLL;
-using DAL;
 using DTO;
 using Guna.UI2.WinForms;
 using System;
@@ -126,7 +125,7 @@ namespace GUI
             {
                 //btnUpdate.Enabled = true;
                 // btnDelete.Enabled = true;
-                txtMaNV.ReadOnly = true;
+                //txtMaNV.ReadOnly = true;
                 int i;
                 i = dtgvNhanVien.CurrentRow.Index;
                 txtMaNV.Text = dtgvNhanVien.Rows[i].Cells[0].Value.ToString();
@@ -149,6 +148,31 @@ namespace GUI
         private void guna2ComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {
+            string MaNV = txtMaNV.Text;
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if(MaNV != null)
+                {
+                    bllstaff.deleteStaff(MaNV);
+                    dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
+                    LoadGridView();
+                    MessBox("Xóa nhân viên thành công");
+                }
+                else
+                {
+                    MessBox("Xóa nhân viên thất bại", true);
+                }
+                txtMaNV.Clear();
+                txtHoTenNV.Clear();
+                btnDOB.Value = DateTime.Today;
+                cbxGT.SelectedIndex = -1;
+                txtDiaChi.Clear();
+                txtSDT.Clear();
+            }
         }
     }  
 }

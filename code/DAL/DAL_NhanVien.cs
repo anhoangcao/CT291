@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DAL
 {
     public class DAL_NhanVien
@@ -31,7 +32,7 @@ namespace DAL
             }
         }
 
-        // Thêm nhân viên
+        // Insert Staff
         public bool insertStaff(DTO_NhanVien staff)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
@@ -40,7 +41,6 @@ namespace DAL
                 conn.Open();
                 string sql = "INSERT INTO dbo.NhanVien (MaNhanVien, TenNhanVien, NgaySinh, GioiTinh, DiaChi, DienThoai) VALUES (@MaNhanVien, @TenNhanVien, @NgaySinh, @GioiTinh, @DiaChi, @DienThoai)";
                 SqlCommand comd = new SqlCommand(sql, conn);
-                //comd.CommandType = CommandType.StoredProcedure;
                 comd.Parameters.AddWithValue("@MaNhanVien", staff.MaNV);
                 comd.Parameters.AddWithValue("@TenNhanVien", staff.HoTen);
                 comd.Parameters.AddWithValue("@NgaySinh", staff.NgaySinh);
@@ -64,6 +64,32 @@ namespace DAL
             return false;
         }
 
+        // Delete Staff
+        public bool deleteStaff(String MaNV)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                string query = "Delete from NhanVien where MaNhanVien = '" + MaNV + "'";
+                SqlCommand command = new SqlCommand(query, conn);
+                command.CommandType = CommandType.Text;
+                command.Parameters.AddWithValue("MaNV", MaNV);
+                if (command.ExecuteNonQuery() > 0)
+                    return true;
+                else 
+                    return false;
+            }
+            catch(Exception)
+            {
+
+            }
+            finally 
+            { 
+                conn.Close(); 
+            }
+            return false;
+        }
     }
     
 }
