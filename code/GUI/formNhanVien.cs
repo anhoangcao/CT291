@@ -134,9 +134,6 @@ namespace GUI
                 cbxGT.Text = dtgvNhanVien.Rows[i].Cells[3].Value.ToString();
                 txtDiaChi.Text = dtgvNhanVien.Rows[i].Cells[4].Value.ToString();
                 txtSDT.Text = dtgvNhanVien.Rows[i].Cells[5].Value.ToString();
-
-
-
             }
         }
 
@@ -173,6 +170,42 @@ namespace GUI
                 txtDiaChi.Clear();
                 txtSDT.Clear();
             }
+        }
+
+        private void btnUpdateNV_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn chắc chắn muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dto_NhanVien = new DTO_NhanVien
+                (
+                    txtMaNV.Text,
+                    txtHoTenNV.Text,
+                    btnDOB.Value,
+                    cbxGT.Text,
+                    txtDiaChi.Text,
+                    txtSDT.Text
+                );
+                if (bllstaff.updateStaff(dto_NhanVien))
+                {
+                    dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
+                    LoadGridView();
+                    MessBox("Sửa thông tin nhân viên thành công");
+                }
+                else
+                {
+                    MessBox("Sửa thông tin nhân viên thất bại");
+                }
+            }
+        }
+
+        private void btnResetNV_Click(object sender, EventArgs e)
+        {
+            txtMaNV.Text = null;
+            txtHoTenNV.Text = null;
+            //btnDOB.Value;
+            cbxGT.Text = null;
+            txtDiaChi.Text = null;
+            txtSDT.Text = null;
         }
     }  
 }

@@ -64,6 +64,38 @@ namespace DAL
             return false;
         }
 
+        // Update Staff
+        public bool updateStaff(DTO_NhanVien staff)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                SqlCommand comd = new SqlCommand("UpdateStaff", conn);
+                comd.CommandType = CommandType.StoredProcedure;
+                comd.Parameters.AddWithValue("MaNhanVien", staff.MaNV);
+                comd.Parameters.AddWithValue("TenNhanVien", staff.HoTen);
+                comd.Parameters.AddWithValue("NgaySinh", staff.NgaySinh);
+                comd.Parameters.AddWithValue("GioiTinh", staff.GioiTinh);
+                comd.Parameters.AddWithValue("DiaChi", staff.DiaChi);
+                comd.Parameters.AddWithValue("DienThoai", staff.DienThoai);
+                if (comd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return false;
+        }
+
         // Delete Staff
         public bool deleteStaff(String MaNV)
         {

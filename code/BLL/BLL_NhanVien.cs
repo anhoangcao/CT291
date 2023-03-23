@@ -22,9 +22,15 @@ namespace BLL
             return dalnhanvien.insertStaff(staff);
         }
 
+        public bool updateStaff(DTO_NhanVien staff)
+        {
+            return dalnhanvien.updateStaff(staff);
+        }
+
         public bool deleteStaff(String MaNV)
         {
             return dalnhanvien.deleteStaff(MaNV);
         }
+
     }
 }
