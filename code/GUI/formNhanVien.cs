@@ -147,31 +147,6 @@ namespace GUI
 
         }
 
-        private void btnXoaNV_Click(object sender, EventArgs e)
-        {
-            string MaNV = txtMaNV.Text;
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if(MaNV != null)
-                {
-                    bllstaff.deleteStaff(MaNV);
-                    dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
-                    LoadGridView();
-                    MessBox("Xóa nhân viên thành công");
-                }
-                else
-                {
-                    MessBox("Xóa nhân viên thất bại", true);
-                }
-                txtMaNV.Clear();
-                txtHoTenNV.Clear();
-                btnDOB.Value = DateTime.Today;
-                cbxGT.SelectedIndex = -1;
-                txtDiaChi.Clear();
-                txtSDT.Clear();
-            }
-        }
-
         private void btnUpdateNV_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn chắc chắn muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -195,6 +170,31 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin nhân viên thất bại");
                 }
+            }
+        }
+
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {
+            string MaNV = txtMaNV.Text;
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (MaNV != null)
+                {
+                    bllstaff.deleteStaff(MaNV);
+                    dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
+                    LoadGridView();
+                    MessBox("Xóa nhân viên thành công");
+                }
+                else
+                {
+                    MessBox("Xóa nhân viên thất bại", true);
+                }
+                txtMaNV.Clear();
+                txtHoTenNV.Clear();
+                btnDOB.Value = DateTime.Today;
+                cbxGT.SelectedIndex = -1;
+                txtDiaChi.Clear();
+                txtSDT.Clear();
             }
         }
 
