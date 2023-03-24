@@ -122,6 +122,7 @@
             this.txtSearchNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.txtSearchNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchNV.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtSearchNV.ForeColor = System.Drawing.Color.Silver;
             this.txtSearchNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchNV.Location = new System.Drawing.Point(628, 269);
             this.txtSearchNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

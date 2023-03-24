@@ -71,14 +71,14 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("UpdateStaff", conn);
-                comd.CommandType = CommandType.StoredProcedure;
-                comd.Parameters.AddWithValue("MaNhanVien", staff.MaNV);
-                comd.Parameters.AddWithValue("TenNhanVien", staff.HoTen);
-                comd.Parameters.AddWithValue("NgaySinh", staff.NgaySinh);
-                comd.Parameters.AddWithValue("GioiTinh", staff.GioiTinh);
-                comd.Parameters.AddWithValue("DiaChi", staff.DiaChi);
-                comd.Parameters.AddWithValue("DienThoai", staff.DienThoai);
+                string sql = "UPDATE dbo.NhanVien SET MaNhanVien = @MaNhanVien, TenNhanVien = @TenNhanVien, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, DiaChi = @DiaChi, DienThoai = @DienThoai WHERE MaNhanVien = @MaNhanVien";
+                SqlCommand comd = new SqlCommand(sql, conn);
+                comd.Parameters.AddWithValue("@MaNhanVien", staff.MaNV);
+                comd.Parameters.AddWithValue("@TenNhanVien", staff.HoTen);
+                comd.Parameters.AddWithValue("@NgaySinh", staff.NgaySinh);
+                comd.Parameters.AddWithValue("@GioiTinh", staff.GioiTinh);
+                comd.Parameters.AddWithValue("@DiaChi", staff.DiaChi);
+                comd.Parameters.AddWithValue("@DienThoai", staff.DienThoai);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -123,14 +123,16 @@ namespace DAL
             return false;
         }
 
+        // Search Staff
         public DataTable searchStaff(String nv)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("searchStaff", conn);
-                comd.CommandType = CommandType.StoredProcedure;
+                string query = "SELECT * FROM NhanVien WHERE TenNhanVien LIKE '%" + nv + "%' ";
+                SqlCommand comd = new SqlCommand(query, conn);
+                comd.CommandType = CommandType.Text;
                 comd.Parameters.AddWithValue("HoTen", nv);
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());

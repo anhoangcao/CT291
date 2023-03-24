@@ -186,7 +186,7 @@ namespace GUI
                     txtSDT.Text
                 );
                 if (bllstaff.updateStaff(dto_NhanVien))
-                {
+                {                  
                     dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
                     LoadGridView();
                     MessBox("Sửa thông tin nhân viên thành công");
