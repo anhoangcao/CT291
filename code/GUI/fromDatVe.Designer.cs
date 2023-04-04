@@ -36,17 +36,17 @@
             // 
             this.panelMainNav.BackColor = System.Drawing.Color.Gray;
             this.panelMainNav.Location = new System.Drawing.Point(1, 1);
-            this.panelMainNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMainNav.Margin = new System.Windows.Forms.Padding(4);
             this.panelMainNav.Name = "panelMainNav";
             this.panelMainNav.Size = new System.Drawing.Size(267, 580);
             this.panelMainNav.TabIndex = 0;
             // 
             // panelMain
             // 
-            this.panelMain.Location = new System.Drawing.Point(276, 69);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Location = new System.Drawing.Point(276, 75);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(905, 512);
+            this.panelMain.Size = new System.Drawing.Size(905, 506);
             this.panelMain.TabIndex = 1;
             // 
             // fromDatVe
@@ -57,7 +57,7 @@
             this.ClientSize = new System.Drawing.Size(1181, 582);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMainNav);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fromDatVe";
             this.Text = "fromDatVe";
             this.ResumeLayout(false);
