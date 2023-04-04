@@ -53,11 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formDatve.cs">
+    <Compile Include="formLichChieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formDatve.Designer.cs">
-      <DependentUpon>formDatve.cs</DependentUpon>
+    <Compile Include="formLichChieu.Designer.cs">
+      <DependentUpon>formLichChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLoaiPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLoaiPhim.Designer.cs">
+      <DependentUpon>formLoaiPhim.cs</DependentUpon>
     </Compile>
     <Compile Include="formMainNV.cs">
       <SubType>Form</SubType>
@@ -89,13 +95,34 @@
     <Compile Include="formNhanVien.Designer.cs">
       <DependentUpon>formNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="formPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPhim.Designer.cs">
+      <DependentUpon>formPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPhongChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPhongChieu.Designer.cs">
+      <DependentUpon>formPhongChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fromDatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fromDatVe.Designer.cs">
+      <DependentUpon>fromDatVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formDatve.resx">
-      <DependentUpon>formDatve.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formKhachHang.resx">
       <DependentUpon>formKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLichChieu.resx">
+      <DependentUpon>formLichChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLoaiPhim.resx">
+      <DependentUpon>formLoaiPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
@@ -108,6 +135,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formNhanVien.resx">
       <DependentUpon>formNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPhim.resx">
+      <DependentUpon>formPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPhongChieu.resx">
+      <DependentUpon>formPhongChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fromDatVe.resx">
+      <DependentUpon>fromDatVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
