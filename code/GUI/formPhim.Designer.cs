@@ -163,7 +163,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Yu Gothic Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(1025, 80);
+            this.label10.Location = new System.Drawing.Point(1060, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 23);
             this.label10.TabIndex = 11;
@@ -282,7 +282,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(927, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(958, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 215);
             this.pictureBox1.TabIndex = 20;
@@ -293,7 +293,7 @@
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.Location = new System.Drawing.Point(972, 250);
+            this.button1.Location = new System.Drawing.Point(1005, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 35);
             this.button1.TabIndex = 21;
