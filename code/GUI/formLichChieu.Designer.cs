@@ -140,11 +140,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(263, 71);
+            this.textBox1.Location = new System.Drawing.Point(793, 234);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 27);
+            this.textBox1.Size = new System.Drawing.Size(299, 38);
             this.textBox1.TabIndex = 14;
             // 
             // label8
@@ -195,29 +195,31 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(793, 67);
+            this.comboBox1.Location = new System.Drawing.Point(793, 56);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(261, 24);
+            this.comboBox1.Size = new System.Drawing.Size(299, 37);
             this.comboBox1.TabIndex = 19;
             // 
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(263, 169);
+            this.comboBox2.Location = new System.Drawing.Point(252, 157);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(262, 24);
+            this.comboBox2.Size = new System.Drawing.Size(300, 37);
             this.comboBox2.TabIndex = 20;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(793, 167);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(793, 157);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(299, 28);
             this.dateTimePicker1.TabIndex = 21;
             // 
             // label5
@@ -235,11 +237,11 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(792, 234);
+            this.textBox2.Location = new System.Drawing.Point(252, 60);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 27);
+            this.textBox2.Size = new System.Drawing.Size(300, 34);
             this.textBox2.TabIndex = 23;
             // 
             // formLichChieu

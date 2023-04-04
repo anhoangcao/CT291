@@ -125,31 +125,31 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(793, 71);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox3.Location = new System.Drawing.Point(802, 60);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 27);
+            this.textBox3.Size = new System.Drawing.Size(284, 34);
             this.textBox3.TabIndex = 16;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2.Location = new System.Drawing.Point(263, 163);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 27);
+            this.textBox2.Size = new System.Drawing.Size(293, 34);
             this.textBox2.TabIndex = 15;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(263, 71);
+            this.textBox1.Location = new System.Drawing.Point(263, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 27);
+            this.textBox1.Size = new System.Drawing.Size(293, 34);
             this.textBox1.TabIndex = 14;
             // 
             // label8
@@ -168,7 +168,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(62, 163);
+            this.label3.Location = new System.Drawing.Point(61, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 26);
             this.label3.TabIndex = 4;
@@ -200,10 +200,10 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(793, 177);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox4.Location = new System.Drawing.Point(793, 167);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(262, 27);
+            this.textBox4.Size = new System.Drawing.Size(284, 34);
             this.textBox4.TabIndex = 17;
             // 
             // label4
