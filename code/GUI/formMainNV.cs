@@ -27,7 +27,10 @@ namespace GUI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-
+            fromDatVe fdatve = new fromDatVe();
+            this.Hide();
+            fdatve.ShowDialog();
+            this.Show();
         }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)

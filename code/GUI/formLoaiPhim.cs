@@ -16,5 +16,35 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaLoai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaLP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
