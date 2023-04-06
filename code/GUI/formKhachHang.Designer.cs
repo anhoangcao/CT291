@@ -44,7 +44,6 @@
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.iconSearchKH = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearchKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnResetKH = new Guna.UI2.WinForms.Guna2Button();
@@ -52,6 +51,7 @@
             this.btnXoaKH = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemKH = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvKhachHang = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSearchKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).BeginInit();
@@ -279,19 +279,6 @@
             this.txtMaKH.TabIndex = 30;
             this.txtMaKH.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(241, 17);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(423, 25);
-            this.guna2HtmlLabel1.TabIndex = 32;
-            this.guna2HtmlLabel1.Text = "HỆ THỐNG QUẢN LÝ BÁN VÉ XEM PHIM";
-            // 
             // iconSearchKH
             // 
             this.iconSearchKH.Image = global::GUI.Properties.Resources.search_removebg_preview;
@@ -426,7 +413,7 @@
             this.dtgvKhachHang.RowHeadersVisible = false;
             this.dtgvKhachHang.RowHeadersWidth = 51;
             this.dtgvKhachHang.RowTemplate.Height = 24;
-            this.dtgvKhachHang.Size = new System.Drawing.Size(729, 205);
+            this.dtgvKhachHang.Size = new System.Drawing.Size(729, 197);
             this.dtgvKhachHang.TabIndex = 45;
             this.dtgvKhachHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvKhachHang.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -451,12 +438,25 @@
             this.dtgvKhachHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Snow;
+            this.label4.Location = new System.Drawing.Point(282, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(345, 29);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "KHACH HANG";
+            // 
             // formKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(902, 512);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.iconSearchKH);
             this.Controls.Add(this.txtSearchKH);
             this.Controls.Add(this.btnResetKH);
@@ -464,7 +464,6 @@
             this.Controls.Add(this.btnXoaKH);
             this.Controls.Add(this.btnThemKH);
             this.Controls.Add(this.dtgvKhachHang);
-            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox3);
@@ -498,7 +497,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private Guna.UI2.WinForms.Guna2TextBox txtTenKH;
         private Guna.UI2.WinForms.Guna2TextBox txtMaKH;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2PictureBox iconSearchKH;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchKH;
         private Guna.UI2.WinForms.Guna2Button btnResetKH;
@@ -506,5 +504,6 @@
         private Guna.UI2.WinForms.Guna2Button btnXoaKH;
         private Guna.UI2.WinForms.Guna2Button btnThemKH;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvKhachHang;
+        private System.Windows.Forms.Label label4;
     }
 }

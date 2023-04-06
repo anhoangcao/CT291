@@ -44,6 +44,8 @@
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaLoai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLP)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -311,12 +313,38 @@
             this.txtMaLoai.TabIndex = 30;
             this.txtMaLoai.TextChanged += new System.EventHandler(this.txtMaLoai_TextChanged);
             // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(810, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(44, 30);
+            this.guna2ControlBox3.TabIndex = 56;
+            // 
+            // guna2ControlBox4
+            // 
+            this.guna2ControlBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.guna2ControlBox4.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox4.Location = new System.Drawing.Point(858, 0);
+            this.guna2ControlBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox4.Name = "guna2ControlBox4";
+            this.guna2ControlBox4.Size = new System.Drawing.Size(44, 30);
+            this.guna2ControlBox4.TabIndex = 55;
+            // 
             // formLoaiPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(902, 512);
+            this.Controls.Add(this.guna2ControlBox3);
+            this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.btnResetLP);
             this.Controls.Add(this.btnSuaLP);
@@ -354,5 +382,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private Guna.UI2.WinForms.Guna2TextBox txtTenLoai;
         private Guna.UI2.WinForms.Guna2TextBox txtMaLoai;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
     }
 }

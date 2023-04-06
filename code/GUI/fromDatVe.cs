@@ -36,5 +36,20 @@ namespace GUI
             panelMain.Controls.Add(formLoaiPhim);
             formLoaiPhim.Show();
         }
+
+        private void btnPhim_Click(object sender, EventArgs e)
+        {
+            formPhim formPhim = new formPhim();
+            panelMain.Controls.Clear();
+            formPhim.TopLevel = false;
+            formPhim.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(formPhim);
+            formPhim.Show();
+        }
+
+        private void panelMainNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
