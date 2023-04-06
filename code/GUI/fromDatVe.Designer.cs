@@ -29,28 +29,36 @@
         private void InitializeComponent()
         {
             this.panelMainNav = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnPhongChieu = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoaiPhim = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPhongChieu = new Guna.UI2.WinForms.Guna2Button();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMainNav.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMainNav
             // 
-            this.panelMainNav.BackColor = System.Drawing.Color.Gray;
+            this.panelMainNav.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelMainNav.Controls.Add(this.btnLoaiPhim);
             this.panelMainNav.Controls.Add(this.btnPhongChieu);
-            this.panelMainNav.Location = new System.Drawing.Point(1, 1);
+            this.panelMainNav.Location = new System.Drawing.Point(-1, 31);
             this.panelMainNav.Name = "panelMainNav";
-            this.panelMainNav.Size = new System.Drawing.Size(183, 507);
+            this.panelMainNav.Size = new System.Drawing.Size(183, 494);
             this.panelMainNav.TabIndex = 0;
             // 
-            // panelMain
+            // btnLoaiPhim
             // 
-            this.panelMain.Location = new System.Drawing.Point(184, 31);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(938, 548);
-            this.panelMain.TabIndex = 1;
+            this.btnLoaiPhim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoaiPhim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoaiPhim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoaiPhim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoaiPhim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoaiPhim.ForeColor = System.Drawing.Color.White;
+            this.btnLoaiPhim.Location = new System.Drawing.Point(0, 234);
+            this.btnLoaiPhim.Name = "btnLoaiPhim";
+            this.btnLoaiPhim.Size = new System.Drawing.Size(183, 45);
+            this.btnLoaiPhim.TabIndex = 0;
+            this.btnLoaiPhim.Text = "Loại Phim";
+            this.btnLoaiPhim.Click += new System.EventHandler(this.btnLoaiPhim_Click);
             // 
             // btnPhongChieu
             // 
@@ -62,32 +70,24 @@
             this.btnPhongChieu.ForeColor = System.Drawing.Color.White;
             this.btnPhongChieu.Location = new System.Drawing.Point(0, 159);
             this.btnPhongChieu.Name = "btnPhongChieu";
-            this.btnPhongChieu.Size = new System.Drawing.Size(180, 45);
+            this.btnPhongChieu.Size = new System.Drawing.Size(183, 45);
             this.btnPhongChieu.TabIndex = 0;
             this.btnPhongChieu.Text = "Phòng Chiếu";
             this.btnPhongChieu.Click += new System.EventHandler(this.btnPhongChieu_Click);
             // 
-            // btnLoaiPhim
+            // panelMain
             // 
-            this.btnLoaiPhim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoaiPhim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoaiPhim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoaiPhim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoaiPhim.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoaiPhim.ForeColor = System.Drawing.Color.White;
-            this.btnLoaiPhim.Location = new System.Drawing.Point(3, 234);
-            this.btnLoaiPhim.Name = "btnLoaiPhim";
-            this.btnLoaiPhim.Size = new System.Drawing.Size(180, 45);
-            this.btnLoaiPhim.TabIndex = 0;
-            this.btnLoaiPhim.Text = "Loại Phim";
-            this.btnLoaiPhim.Click += new System.EventHandler(this.btnLoaiPhim_Click);
+            this.panelMain.Location = new System.Drawing.Point(180, 31);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(853, 497);
+            this.panelMain.TabIndex = 1;
             // 
             // fromDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1125, 583);
+            this.ClientSize = new System.Drawing.Size(1080, 522);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMainNav);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
