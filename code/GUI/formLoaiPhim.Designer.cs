@@ -65,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(308, 17);
+            this.label1.Location = new System.Drawing.Point(311, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 29);
@@ -181,19 +181,19 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(729, 193);
             this.guna2GroupBox1.TabIndex = 54;
-            this.guna2GroupBox1.Text = "Quản lý khách hàng";
+            this.guna2GroupBox1.Text = "Thông tin loại phim";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(189, 157);
+            this.label5.Location = new System.Drawing.Point(189, 155);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 40;
-            this.label5.Text = "Mô Tả";
+            this.label5.Text = "Mô tả";
             // 
             // label2
             // 
@@ -201,24 +201,24 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(188, 53);
+            this.label2.Location = new System.Drawing.Point(188, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Mã Loại";
+            this.label2.Text = "Mã loại";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(188, 106);
+            this.label3.Location = new System.Drawing.Point(188, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Tên Loại";
+            this.label3.Text = "Tên loại";
             // 
             // btnDongLP
             // 
@@ -253,13 +253,13 @@
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtMoTa.ForeColor = System.Drawing.Color.Silver;
             this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtMoTa.Location = new System.Drawing.Point(264, 149);
+            this.txtMoTa.Location = new System.Drawing.Point(264, 147);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.PasswordChar = '\0';
             this.txtMoTa.PlaceholderText = "";
             this.txtMoTa.SelectedText = "";
-            this.txtMoTa.Size = new System.Drawing.Size(194, 31);
+            this.txtMoTa.Size = new System.Drawing.Size(222, 31);
             this.txtMoTa.TabIndex = 32;
             // 
             // txtTenLoai
@@ -277,13 +277,13 @@
             this.txtTenLoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtTenLoai.ForeColor = System.Drawing.Color.Silver;
             this.txtTenLoai.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtTenLoai.Location = new System.Drawing.Point(264, 96);
+            this.txtTenLoai.Location = new System.Drawing.Point(264, 94);
             this.txtTenLoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenLoai.Name = "txtTenLoai";
             this.txtTenLoai.PasswordChar = '\0';
             this.txtTenLoai.PlaceholderText = "";
             this.txtTenLoai.SelectedText = "";
-            this.txtTenLoai.Size = new System.Drawing.Size(194, 31);
+            this.txtTenLoai.Size = new System.Drawing.Size(222, 31);
             this.txtTenLoai.TabIndex = 31;
             // 
             // txtMaLoai
@@ -301,13 +301,13 @@
             this.txtMaLoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtMaLoai.ForeColor = System.Drawing.Color.Silver;
             this.txtMaLoai.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtMaLoai.Location = new System.Drawing.Point(264, 44);
+            this.txtMaLoai.Location = new System.Drawing.Point(264, 42);
             this.txtMaLoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaLoai.Name = "txtMaLoai";
             this.txtMaLoai.PasswordChar = '\0';
             this.txtMaLoai.PlaceholderText = "";
             this.txtMaLoai.SelectedText = "";
-            this.txtMaLoai.Size = new System.Drawing.Size(194, 31);
+            this.txtMaLoai.Size = new System.Drawing.Size(222, 31);
             this.txtMaLoai.TabIndex = 30;
             this.txtMaLoai.TextChanged += new System.EventHandler(this.txtMaLoai_TextChanged);
             // 
