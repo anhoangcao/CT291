@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,6 +36,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnResetLP = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbxPCLC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnDongPC = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,23 +51,10 @@
             this.btnXoaLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemLC = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvLC = new System.Windows.Forms.DataGridView();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(388, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PHIM ";
             // 
             // label2
             // 
@@ -167,7 +154,7 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(59, 47);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(13, 13);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(799, 248);
             this.guna2GroupBox1.TabIndex = 36;
@@ -187,6 +174,16 @@
             this.btnResetLP.Size = new System.Drawing.Size(95, 31);
             this.btnResetLP.TabIndex = 54;
             this.btnResetLP.Text = "Chọn ảnh";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 2;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(632, 49);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(128, 149);
+            this.guna2PictureBox1.TabIndex = 50;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // cbxPCLC
             // 
@@ -388,7 +385,7 @@
             this.btnResetLC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnResetLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnResetLC.ForeColor = System.Drawing.Color.White;
-            this.btnResetLC.Location = new System.Drawing.Point(352, 312);
+            this.btnResetLC.Location = new System.Drawing.Point(306, 278);
             this.btnResetLC.Name = "btnResetLC";
             this.btnResetLC.Size = new System.Drawing.Size(93, 31);
             this.btnResetLC.TabIndex = 61;
@@ -403,7 +400,7 @@
             this.btnSuaLC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSuaLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnSuaLC.ForeColor = System.Drawing.Color.White;
-            this.btnSuaLC.Location = new System.Drawing.Point(156, 312);
+            this.btnSuaLC.Location = new System.Drawing.Point(110, 278);
             this.btnSuaLC.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaLC.Name = "btnSuaLC";
             this.btnSuaLC.Size = new System.Drawing.Size(73, 31);
@@ -419,7 +416,7 @@
             this.btnXoaLC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoaLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnXoaLC.ForeColor = System.Drawing.Color.White;
-            this.btnXoaLC.Location = new System.Drawing.Point(253, 312);
+            this.btnXoaLC.Location = new System.Drawing.Point(207, 278);
             this.btnXoaLC.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaLC.Name = "btnXoaLC";
             this.btnXoaLC.Size = new System.Drawing.Size(73, 31);
@@ -435,7 +432,7 @@
             this.btnThemLC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThemLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnThemLC.ForeColor = System.Drawing.Color.White;
-            this.btnThemLC.Location = new System.Drawing.Point(59, 312);
+            this.btnThemLC.Location = new System.Drawing.Point(13, 278);
             this.btnThemLC.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemLC.Name = "btnThemLC";
             this.btnThemLC.Size = new System.Drawing.Size(73, 31);
@@ -446,7 +443,7 @@
             // 
             this.dtgvLC.BackgroundColor = System.Drawing.Color.White;
             this.dtgvLC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvLC.Location = new System.Drawing.Point(59, 349);
+            this.dtgvLC.Location = new System.Drawing.Point(13, 315);
             this.dtgvLC.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvLC.Name = "dtgvLC";
             this.dtgvLC.RowHeadersWidth = 51;
@@ -454,43 +451,30 @@
             this.dtgvLC.Size = new System.Drawing.Size(799, 173);
             this.dtgvLC.TabIndex = 57;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 2;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(632, 49);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(128, 149);
-            this.guna2PictureBox1.TabIndex = 50;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // formPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(911, 537);
+            this.ClientSize = new System.Drawing.Size(824, 502);
             this.Controls.Add(this.btnResetLC);
             this.Controls.Add(this.btnSuaLC);
             this.Controls.Add(this.btnXoaLC);
             this.Controls.Add(this.btnThemLC);
             this.Controls.Add(this.dtgvLC);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formPhim";
             this.Text = "formPhim";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
