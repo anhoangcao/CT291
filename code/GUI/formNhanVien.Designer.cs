@@ -192,6 +192,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvNhanVien.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);

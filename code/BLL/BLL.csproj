@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL_KhachHang.cs" />
+    <Compile Include="BLL_LoaiPhim.cs" />
     <Compile Include="BLL_NhanVien.cs" />
+    <Compile Include="BLL_PhongChieu.cs" />
     <Compile Include="BLL_TKHT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

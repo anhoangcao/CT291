@@ -34,7 +34,6 @@
             this.btnResetLP = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuaLP = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaLP = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThemLP = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaLoai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLP)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             this.dtgvLP.RowTemplate.Height = 24;
             this.dtgvLP.Size = new System.Drawing.Size(795, 219);
             this.dtgvLP.TabIndex = 23;
+            this.dtgvLP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvLP_CellContentClick);
             // 
             // guna2ControlBox2
             // 
@@ -96,6 +97,7 @@
             this.btnResetLP.Size = new System.Drawing.Size(94, 31);
             this.btnResetLP.TabIndex = 53;
             this.btnResetLP.Text = "Làm mới";
+            this.btnResetLP.Click += new System.EventHandler(this.btnResetLP_Click);
             // 
             // btnSuaLP
             // 
@@ -129,24 +131,7 @@
             this.btnXoaLP.Size = new System.Drawing.Size(73, 31);
             this.btnXoaLP.TabIndex = 51;
             this.btnXoaLP.Text = "Xóa";
-            // 
-            // btnThemLP
-            // 
-            this.btnThemLP.BorderRadius = 5;
-            this.btnThemLP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemLP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemLP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemLP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemLP.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnThemLP.ForeColor = System.Drawing.Color.White;
-            this.btnThemLP.Location = new System.Drawing.Point(18, 233);
-            this.btnThemLP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThemLP.Name = "btnThemLP";
-            this.btnThemLP.Size = new System.Drawing.Size(73, 31);
-            this.btnThemLP.TabIndex = 50;
-            this.btnThemLP.Text = "Thêm ";
-            this.btnThemLP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnThemLP.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnXoaLP.Click += new System.EventHandler(this.btnXoaLP_Click);
             // 
             // guna2GroupBox1
             // 
@@ -297,23 +282,40 @@
             this.txtMaLoai.TabIndex = 30;
             this.txtMaLoai.TextChanged += new System.EventHandler(this.txtMaLoai_TextChanged);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(18, 233);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(73, 31);
+            this.guna2Button2.TabIndex = 55;
+            this.guna2Button2.Text = "Thêm";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // formLoaiPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(824, 502);
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.btnResetLP);
             this.Controls.Add(this.btnSuaLP);
             this.Controls.Add(this.btnXoaLP);
-            this.Controls.Add(this.btnThemLP);
             this.Controls.Add(this.dtgvLP);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formLoaiPhim";
             this.Text = "formLoaiPhim";
+            this.Load += new System.EventHandler(this.formLoaiPhim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLP)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -328,7 +330,6 @@
         private Guna.UI2.WinForms.Guna2Button btnResetLP;
         private Guna.UI2.WinForms.Guna2Button btnSuaLP;
         private Guna.UI2.WinForms.Guna2Button btnXoaLP;
-        private Guna.UI2.WinForms.Guna2Button btnThemLP;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
@@ -337,5 +338,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private Guna.UI2.WinForms.Guna2TextBox txtTenLoai;
         private Guna.UI2.WinForms.Guna2TextBox txtMaLoai;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
