@@ -63,6 +63,7 @@
             this.dtgvLC.RowTemplate.Height = 24;
             this.dtgvLC.Size = new System.Drawing.Size(797, 206);
             this.dtgvLC.TabIndex = 37;
+            this.dtgvLC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvLC_CellContentClick);
             // 
             // guna2GroupBox1
             // 
