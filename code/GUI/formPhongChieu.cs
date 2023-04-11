@@ -36,6 +36,8 @@ namespace GUI
         // DataGridView
         private void LoadGridView()
         {
+            dtgvPhongChieu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             dtgvPhongChieu.Columns[0].HeaderText = "Mã phòng chiếu";
             dtgvPhongChieu.Columns[1].HeaderText = "Tên phòng chiếu";
             dtgvPhongChieu.Columns[2].HeaderText = "Số chỗ ngồi";

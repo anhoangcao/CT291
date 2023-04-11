@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_KhachHang.cs" />
+    <Compile Include="DTO_LichChieu.cs" />
     <Compile Include="DTO_LoaiPhim.cs" />
     <Compile Include="DTO_NhanVien.cs" />
+    <Compile Include="DTO_Phim.cs" />
     <Compile Include="DTO_PhongChieu.cs" />
     <Compile Include="DTO_TKHT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

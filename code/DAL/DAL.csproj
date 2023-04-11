@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_KhachHang.cs" />
+    <Compile Include="DAL_LichChieu.cs" />
     <Compile Include="DAL_LoaiPhim.cs" />
     <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_Phim.cs" />
     <Compile Include="DAL_PhongChieu.cs" />
     <Compile Include="DAL_TKHT.cs" />
     <Compile Include="DAL_TKHTAccess.cs" />
