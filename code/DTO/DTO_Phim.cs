@@ -38,6 +38,5 @@ namespace DTO
         public string SanXuat { get => sanXuat; set => sanXuat = value; }
         public string DaoDien { get => daoDien; set => daoDien = value; }
         public byte[] PosTer { get => hinhAnh; set => hinhAnh = value; }
-
     }
 }

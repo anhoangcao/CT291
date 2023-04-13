@@ -132,10 +132,10 @@ namespace DAL
                                "FROM dbo.LichChieu as a " +
                                "JOIN dbo.PhongChieu as b ON a.MaPhongChieu = b.MaPhongChieu " +
                                "JOIN dbo.Phim as c ON a.MaPhim = c.MaPhim " +
-                               "WHERE c.TenPhim LIKE '%" + lc + "%' ";
-
+                               "WHERE c.TenPhim LIKE '%' + @lc + '%' or a.NgayChieu LIKE '%' + @lc + '%' or b.TenPhongChieu LIKE '%' + @lc + '%'";
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.CommandType = CommandType.Text;
+                comd.Parameters.AddWithValue("@lc", lc);
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
                 return data;
@@ -144,6 +144,7 @@ namespace DAL
             {
                 conn.Close();
             }
+
         }
 
     }

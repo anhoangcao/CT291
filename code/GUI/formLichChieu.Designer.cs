@@ -30,16 +30,15 @@
         {
             this.dtgvLC = new System.Windows.Forms.DataGridView();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxLPC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxDOBLC = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaLC = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGV = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnResetLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuaLC = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +46,8 @@
             this.btnThemLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchLC = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearchLC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchLC)).BeginInit();
@@ -70,9 +70,9 @@
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GroupBox1.Controls.Add(this.cbxPhim);
+            this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.cbxLPC);
             this.guna2GroupBox1.Controls.Add(this.cbxDOBLC);
-            this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.label4);
             this.guna2GroupBox1.Controls.Add(this.label6);
             this.guna2GroupBox1.Controls.Add(this.label5);
@@ -92,24 +92,6 @@
             this.guna2GroupBox1.TabIndex = 42;
             this.guna2GroupBox1.Text = "Thông tin lịch chiếu";
             // 
-            // cbxPhim
-            // 
-            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
-            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.cbxPhim.BorderRadius = 3;
-            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cbxPhim.ForeColor = System.Drawing.Color.White;
-            this.cbxPhim.ItemHeight = 30;
-            this.cbxPhim.Location = new System.Drawing.Point(160, 105);
-            this.cbxPhim.Name = "cbxPhim";
-            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
-            this.cbxPhim.TabIndex = 48;
-            // 
             // cbxLPC
             // 
             this.cbxLPC.BackColor = System.Drawing.Color.Transparent;
@@ -123,7 +105,7 @@
             this.cbxLPC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.cbxLPC.ForeColor = System.Drawing.Color.White;
             this.cbxLPC.ItemHeight = 30;
-            this.cbxLPC.Location = new System.Drawing.Point(160, 158);
+            this.cbxLPC.Location = new System.Drawing.Point(160, 101);
             this.cbxLPC.Name = "cbxLPC";
             this.cbxLPC.Size = new System.Drawing.Size(194, 36);
             this.cbxLPC.TabIndex = 48;
@@ -145,24 +127,12 @@
             this.cbxDOBLC.Value = new System.DateTime(2023, 3, 17, 12, 6, 55, 376);
             this.cbxDOBLC.ValueChanged += new System.EventHandler(this.cbxDOBLC_ValueChanged);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(48, 116);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Tên phim";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(48, 169);
+            this.label4.Location = new System.Drawing.Point(48, 112);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 16);
@@ -247,6 +217,30 @@
             this.txtMaLC.SelectedText = "";
             this.txtMaLC.Size = new System.Drawing.Size(194, 31);
             this.txtMaLC.TabIndex = 33;
+            // 
+            // txtTT
+            // 
+            this.txtTT.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtTT.BorderRadius = 4;
+            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTT.DefaultText = "";
+            this.txtTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.txtTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTT.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtTT.ForeColor = System.Drawing.Color.Silver;
+            this.txtTT.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
+            this.txtTT.Location = new System.Drawing.Point(503, 154);
+            this.txtTT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTT.Name = "txtTT";
+            this.txtTT.PasswordChar = '\0';
+            this.txtTT.PlaceholderText = "";
+            this.txtTT.SelectedText = "";
+            this.txtTT.Size = new System.Drawing.Size(194, 31);
+            this.txtTT.TabIndex = 33;
             // 
             // txtGV
             // 
@@ -373,30 +367,37 @@
             this.txtSearchLC.SelectedText = "";
             this.txtSearchLC.Size = new System.Drawing.Size(194, 31);
             this.txtSearchLC.TabIndex = 57;
+            this.txtSearchLC.TextChanged += new System.EventHandler(this.txtSearchLC_TextChanged);
             // 
-            // txtTT
+            // cbxPhim
             // 
-            this.txtTT.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtTT.BorderRadius = 4;
-            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTT.DefaultText = "";
-            this.txtTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.txtTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTT.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtTT.ForeColor = System.Drawing.Color.Silver;
-            this.txtTT.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtTT.Location = new System.Drawing.Point(503, 154);
-            this.txtTT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTT.Name = "txtTT";
-            this.txtTT.PasswordChar = '\0';
-            this.txtTT.PlaceholderText = "";
-            this.txtTT.SelectedText = "";
-            this.txtTT.Size = new System.Drawing.Size(194, 31);
-            this.txtTT.TabIndex = 33;
+            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
+            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.cbxPhim.BorderRadius = 3;
+            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxPhim.ForeColor = System.Drawing.Color.White;
+            this.cbxPhim.ItemHeight = 30;
+            this.cbxPhim.Location = new System.Drawing.Point(160, 149);
+            this.cbxPhim.Name = "cbxPhim";
+            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
+            this.cbxPhim.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Location = new System.Drawing.Point(48, 160);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Tên phim";
             // 
             // formLichChieu
             // 
@@ -432,7 +433,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2TextBox txtGV;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DateTimePicker cbxDOBLC;
         private Guna.UI2.WinForms.Guna2TextBox txtMaLC;
@@ -443,7 +443,8 @@
         private Guna.UI2.WinForms.Guna2Button btnThemLC;
         private Guna.UI2.WinForms.Guna2PictureBox btnSearchLC;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchLC;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxPhim;
         private Guna.UI2.WinForms.Guna2TextBox txtTT;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxPhim;
+        private System.Windows.Forms.Label label7;
     }
 }

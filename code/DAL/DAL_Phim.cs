@@ -18,7 +18,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SELECT * FROM dbo.Phim", conn);
+                SqlCommand comd = new SqlCommand("SELECT a.MaPhim, a.TenPhim, a.MoTa, b.TenLoaiPhim, a.ThoiLuong, a.SanXuat, a.DaoDien, a.HinhAnh FROM dbo.Phim as a, dbo.LoaiPhim as b where a.MaLoaiPhim = b.MaLoaiPhim", conn);
                 comd.CommandType = CommandType.Text;
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
@@ -123,6 +123,29 @@ namespace DAL
                 conn.Close();
             }
             return false;
+        }
+
+        public DataTable searchP(string p)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                string query = "SELECT a.MaPhim, a.TenPhim, a.MoTa, b.TenLoaiPhim, a.ThoiLuong, a.SanXuat, a.DaoDien, a.HinhAnh " +
+                               "FROM dbo.Phim as a " +
+                               "JOIN dbo.LoaiPhim as b ON a.MaLoaiPhim = b.MaLoaiPhim " +
+                               "WHERE a.TenPhim LIKE '%' + @p + '%' or b.TenLoaiPhim LIKE '%' + @p + '%'";
+                SqlCommand comd = new SqlCommand(query, conn);
+                comd.CommandType = CommandType.Text;
+                comd.Parameters.AddWithValue("@p", p);
+                DataTable data = new DataTable();
+                data.Load(comd.ExecuteReader());
+                return data;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

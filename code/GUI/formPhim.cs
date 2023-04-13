@@ -255,6 +255,25 @@ namespace GUI
         {
 
         }
+
+        private void txtSearchP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchP_Click(object sender, EventArgs e)
+        {
+            string p = txtSearchP.Text;
+            if (p == "")
+            {
+                formPhim_Load(sender, e);
+            }
+            else
+            {
+                DataTable table = bllphim.searchP(p);
+                dtgvPhim.DataSource = table;
+            }
+        }
     }
     
 }

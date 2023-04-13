@@ -31,5 +31,10 @@ namespace BLL
         {
             return dalphim.deletePhim(MaPhim);
         }
+
+        public DataTable searchP(string p)
+        {
+            return dalphim.searchP(p);
+        }
     }
 }

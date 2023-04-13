@@ -51,8 +51,8 @@ namespace GUI
         private void LoadGridView()
         {
             dtgvLC.Columns[0].HeaderText = "Mã lịch chiếu";
-            dtgvLC.Columns[1].HeaderText = "Tên phim";
-            dtgvLC.Columns[2].HeaderText = "Tên phòng";
+            dtgvLC.Columns[1].HeaderText = "Tên phòng";
+            dtgvLC.Columns[2].HeaderText = "Tên phim";
             dtgvLC.Columns[3].HeaderText = "Ngày chiếu";
             dtgvLC.Columns[4].HeaderText = "Giá vé";
             //dtgvLC.Columns[5].HeaderText = "Trạng thái";
@@ -79,8 +79,8 @@ namespace GUI
                 int i;
                 i = dtgvLC.CurrentRow.Index;
                 txtMaLC.Text = dtgvLC.Rows[i].Cells[0].Value.ToString();
-                cbxPhim.Text = dtgvLC.Rows[i].Cells[1].Value.ToString();
-                cbxLPC.Text = dtgvLC.Rows[i].Cells[2].Value.ToString();
+                cbxLPC.Text = dtgvLC.Rows[i].Cells[1].Value.ToString();
+                cbxPhim.Text = dtgvLC.Rows[i].Cells[2].Value.ToString();              
                 cbxDOBLC.Text = dtgvLC.Rows[i].Cells[3].Value.ToString();
                 txtGV.Text = dtgvLC.Rows[i].Cells[4].Value.ToString();
                 //txtTT.Text = dtgvLC.Rows[i].Cells[5].Value.ToString();
@@ -219,10 +219,15 @@ namespace GUI
         private void btnResetLC_Click(object sender, EventArgs e)
         {
             txtMaLC.Text = null;
-            cbxPhim.SelectedIndex = -1;
+            cbxPhim.Text = null;
             cbxDOBLC.Value = DateTime.Today;
-            cbxLPC.SelectedIndex = -1;
+            cbxLPC.Text = null;
             txtGV.Text = null;
+        }
+
+        private void txtSearchLC_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
