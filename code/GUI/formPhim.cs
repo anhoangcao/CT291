@@ -250,6 +250,11 @@ namespace GUI
             cbxP.SelectedIndex = -1;
             picbPhim.Image = null;
         }
+
+        private void txtTL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

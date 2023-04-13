@@ -30,6 +30,7 @@
         {
             this.dtgvLC = new System.Windows.Forms.DataGridView();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxLPC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxDOBLC = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,12 +45,12 @@
             this.btnSuaLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemLC = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSearchNV = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnSearchLC = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearchLC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTT = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearchNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearchLC)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvLC
@@ -78,6 +79,7 @@
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.guna2Button3);
             this.guna2GroupBox1.Controls.Add(this.txtMaLC);
+            this.guna2GroupBox1.Controls.Add(this.txtTT);
             this.guna2GroupBox1.Controls.Add(this.txtGV);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
@@ -89,6 +91,24 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(797, 208);
             this.guna2GroupBox1.TabIndex = 42;
             this.guna2GroupBox1.Text = "Thông tin lịch chiếu";
+            // 
+            // cbxPhim
+            // 
+            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
+            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.cbxPhim.BorderRadius = 3;
+            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxPhim.ForeColor = System.Drawing.Color.White;
+            this.cbxPhim.ItemHeight = 30;
+            this.cbxPhim.Location = new System.Drawing.Point(160, 105);
+            this.cbxPhim.Name = "cbxPhim";
+            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
+            this.cbxPhim.TabIndex = 48;
             // 
             // cbxLPC
             // 
@@ -123,6 +143,7 @@
             this.cbxDOBLC.Size = new System.Drawing.Size(194, 31);
             this.cbxDOBLC.TabIndex = 47;
             this.cbxDOBLC.Value = new System.DateTime(2023, 3, 17, 12, 6, 55, 376);
+            this.cbxDOBLC.ValueChanged += new System.EventHandler(this.cbxDOBLC_ValueChanged);
             // 
             // label7
             // 
@@ -265,6 +286,7 @@
             this.btnResetLC.Size = new System.Drawing.Size(93, 31);
             this.btnResetLC.TabIndex = 56;
             this.btnResetLC.Text = "Làm mới";
+            this.btnResetLC.Click += new System.EventHandler(this.btnResetLC_Click);
             // 
             // btnSuaLC
             // 
@@ -281,6 +303,7 @@
             this.btnSuaLC.Size = new System.Drawing.Size(73, 31);
             this.btnSuaLC.TabIndex = 55;
             this.btnSuaLC.Text = "Sửa";
+            this.btnSuaLC.Click += new System.EventHandler(this.btnSuaLC_Click);
             // 
             // btnXoaLC
             // 
@@ -297,6 +320,7 @@
             this.btnXoaLC.Size = new System.Drawing.Size(73, 31);
             this.btnXoaLC.TabIndex = 54;
             this.btnXoaLC.Text = "Xóa";
+            this.btnXoaLC.Click += new System.EventHandler(this.btnXoaLC_Click);
             // 
             // btnThemLC
             // 
@@ -313,17 +337,19 @@
             this.btnThemLC.Size = new System.Drawing.Size(73, 31);
             this.btnThemLC.TabIndex = 53;
             this.btnThemLC.Text = "Thêm ";
+            this.btnThemLC.Click += new System.EventHandler(this.btnThemLC_Click);
             // 
-            // btnSearchNV
+            // btnSearchLC
             // 
-            this.btnSearchNV.Image = global::GUI.Properties.Resources.search_removebg_preview;
-            this.btnSearchNV.ImageRotate = 0F;
-            this.btnSearchNV.Location = new System.Drawing.Point(778, 248);
-            this.btnSearchNV.Name = "btnSearchNV";
-            this.btnSearchNV.Size = new System.Drawing.Size(30, 25);
-            this.btnSearchNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSearchNV.TabIndex = 58;
-            this.btnSearchNV.TabStop = false;
+            this.btnSearchLC.Image = global::GUI.Properties.Resources.search_removebg_preview;
+            this.btnSearchLC.ImageRotate = 0F;
+            this.btnSearchLC.Location = new System.Drawing.Point(778, 248);
+            this.btnSearchLC.Name = "btnSearchLC";
+            this.btnSearchLC.Size = new System.Drawing.Size(30, 25);
+            this.btnSearchLC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearchLC.TabIndex = 58;
+            this.btnSearchLC.TabStop = false;
+            this.btnSearchLC.Click += new System.EventHandler(this.btnSearchLC_Click);
             // 
             // txtSearchLC
             // 
@@ -348,23 +374,29 @@
             this.txtSearchLC.Size = new System.Drawing.Size(194, 31);
             this.txtSearchLC.TabIndex = 57;
             // 
-            // cbxPhim
+            // txtTT
             // 
-            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
-            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.cbxPhim.BorderRadius = 3;
-            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cbxPhim.ForeColor = System.Drawing.Color.White;
-            this.cbxPhim.ItemHeight = 30;
-            this.cbxPhim.Location = new System.Drawing.Point(160, 105);
-            this.cbxPhim.Name = "cbxPhim";
-            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
-            this.cbxPhim.TabIndex = 48;
+            this.txtTT.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtTT.BorderRadius = 4;
+            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTT.DefaultText = "";
+            this.txtTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.txtTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTT.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtTT.ForeColor = System.Drawing.Color.Silver;
+            this.txtTT.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
+            this.txtTT.Location = new System.Drawing.Point(503, 154);
+            this.txtTT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTT.Name = "txtTT";
+            this.txtTT.PasswordChar = '\0';
+            this.txtTT.PlaceholderText = "";
+            this.txtTT.SelectedText = "";
+            this.txtTT.Size = new System.Drawing.Size(194, 31);
+            this.txtTT.TabIndex = 33;
             // 
             // formLichChieu
             // 
@@ -372,7 +404,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(824, 502);
-            this.Controls.Add(this.btnSearchNV);
+            this.Controls.Add(this.btnSearchLC);
             this.Controls.Add(this.txtSearchLC);
             this.Controls.Add(this.btnResetLC);
             this.Controls.Add(this.btnSuaLC);
@@ -387,7 +419,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearchNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearchLC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,8 +441,9 @@
         private Guna.UI2.WinForms.Guna2Button btnSuaLC;
         private Guna.UI2.WinForms.Guna2Button btnXoaLC;
         private Guna.UI2.WinForms.Guna2Button btnThemLC;
-        private Guna.UI2.WinForms.Guna2PictureBox btnSearchNV;
+        private Guna.UI2.WinForms.Guna2PictureBox btnSearchLC;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchLC;
         private Guna.UI2.WinForms.Guna2ComboBox cbxPhim;
+        private Guna.UI2.WinForms.Guna2TextBox txtTT;
     }
 }

@@ -18,7 +18,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SELECT * FROM dbo.LichChieu", conn);
+                SqlCommand comd = new SqlCommand("SELECT a.MaLichChieu, b.TenPhongChieu, c.TenPhim, a.NgayChieu, a.GiaVe FROM dbo.LichChieu as a, dbo.PhongChieu as b, dbo.Phim as c where a.MaPhongChieu = b.MaPhongChieu and a.MaPhim = c.MaPhim", conn);
                 comd.CommandType = CommandType.Text;
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
@@ -37,13 +37,14 @@ namespace DAL
             try
             {
                 conn.Open();
-                string sql = "INSERT INTO dbo.LichChieu (MaLichChieu, MaPhim, MaPhong, NgayChieu, GiaVe) VALUES (@MaLichChieu, @MaPhim, @MaPhong, @NgayChieu, @GiaVe)";
+                string sql = "INSERT INTO dbo.LichChieu (MaLichChieu, MaPhim, MaPhongChieu, NgayChieu, GiaVe) VALUES (@MaLichChieu, @TenPhim, @MaPhong, @NgayChieu, @GiaVe)";
                 SqlCommand comd = new SqlCommand(sql, conn);
                 comd.Parameters.AddWithValue("@MaLichChieu", lc.MaLC);
-                comd.Parameters.AddWithValue("@MaPhim", lc.TenPhim);
+                comd.Parameters.AddWithValue("@TenPhim", lc.TenPhim);
                 comd.Parameters.AddWithValue("@MaPhong", lc.MaPC);
                 comd.Parameters.AddWithValue("@NgayChieu", lc.NgayChieu);
                 comd.Parameters.AddWithValue("@GiaVe", lc.GiaVe);
+                // comd.Parameters.AddWithValue("@TrangThai", lc.TrangThai);
 
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
@@ -62,18 +63,20 @@ namespace DAL
             return false;
         }
 
-        // Update Staff
-        public bool updateLP(DTO_LoaiPhim lp)
+        // Update Lich Chieu
+        public bool updateLC(DTO_LichChieu lc)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                string sql = "UPDATE dbo.LoaiPhim SET MaLoaiPhim = @MaLoaiPhim, TenLoaiPhim = @TenLoaiPhim, MoTa = @MoTa WHERE MaLoaiPhim = @MaLoaiPhim";
+                string sql = "UPDATE dbo.LichChieu SET MaLichChieu = @MaLichChieu, MaPhim = @TenPhim, MaPhongChieu = @MaPhongChieu, NgayChieu = @NgayChieu, GiaVe = @GiaVe WHERE MaLichChieu = @MaLichChieu";
                 SqlCommand comd = new SqlCommand(sql, conn);
-                comd.Parameters.AddWithValue("@MaLoaiPhim", lp.MaLP);
-                comd.Parameters.AddWithValue("@TenLoaiPhim", lp.TenLP);
-                comd.Parameters.AddWithValue("@MoTa", lp.MoTa);
+                comd.Parameters.AddWithValue("@MaLichChieu", lc.MaLC);
+                comd.Parameters.AddWithValue("@TenPhim", lc.TenPhim);
+                comd.Parameters.AddWithValue("@MaPhongChieu", lc.MaPC);
+                comd.Parameters.AddWithValue("@NgayChieu", lc.NgayChieu);
+                comd.Parameters.AddWithValue("@GiaVe", lc.GiaVe);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -91,17 +94,17 @@ namespace DAL
             return false;
         }
 
-        // Delete Staff
-        public bool deleteLP(String MaLP)
+        // Delete Lich Chieu
+        public bool deleteLC(String MaLC)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                string query = "Delete from LoaiPhim where MaLoaiPhim = '" + MaLP + "'";
+                string query = "Delete from LichChieu where MaLichChieu = '" + MaLC + "'";
                 SqlCommand command = new SqlCommand(query, conn);
                 command.CommandType = CommandType.Text;
-                command.Parameters.AddWithValue("MaLP", MaLP);
+                command.Parameters.AddWithValue("MaLP", MaLC);
                 if (command.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -117,5 +120,31 @@ namespace DAL
             }
             return false;
         }
+
+        // Search LichChieu
+        public DataTable searchLC(string lc)
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                string query = "SELECT a.MaLichChieu, b.TenPhongChieu, c.TenPhim, a.NgayChieu, a.GiaVe " +
+                               "FROM dbo.LichChieu as a " +
+                               "JOIN dbo.PhongChieu as b ON a.MaPhongChieu = b.MaPhongChieu " +
+                               "JOIN dbo.Phim as c ON a.MaPhim = c.MaPhim " +
+                               "WHERE c.TenPhim LIKE '%" + lc + "%' ";
+
+                SqlCommand comd = new SqlCommand(query, conn);
+                comd.CommandType = CommandType.Text;
+                DataTable data = new DataTable();
+                data.Load(comd.ExecuteReader());
+                return data;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

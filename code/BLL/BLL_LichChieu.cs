@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,26 @@ namespace BLL
         public DataTable List_LichChieu()
         {
             return dallichchieu.ListLichChieu();
+        }
+
+        public bool insertLC(DTO_LichChieu lc)
+        {
+            return dallichchieu.insertLC(lc);
+        }
+
+        public bool updateLC(DTO_LichChieu lc)
+        {
+            return dallichchieu.updateLC(lc);
+        }
+
+        public bool deleteLC(String MaLC)
+        {
+            return dallichchieu.deleteLC(MaLC);
+        }
+
+        public DataTable searchLC(string lc)
+        {
+            return dallichchieu.searchLC(lc);
         }
     }
 }

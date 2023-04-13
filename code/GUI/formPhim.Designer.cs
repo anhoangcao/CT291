@@ -296,6 +296,7 @@
             this.txtTL.SelectedText = "";
             this.txtTL.Size = new System.Drawing.Size(162, 31);
             this.txtTL.TabIndex = 32;
+            this.txtTL.TextChanged += new System.EventHandler(this.txtTL_TextChanged);
             // 
             // txtMoTa
             // 
