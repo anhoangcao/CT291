@@ -275,6 +275,7 @@
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(44, 30);
             this.guna2ControlBox3.TabIndex = 64;
+            this.guna2ControlBox3.Click += new System.EventHandler(this.guna2ControlBox3_Click);
             // 
             // fromDatVe
             // 

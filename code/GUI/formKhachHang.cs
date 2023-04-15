@@ -87,6 +87,9 @@ namespace GUI
 
         private void formKhachHang_Load_1(object sender, EventArgs e)
         {
+            txtMaKH.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaKH.Text = nuamua.CreateNewID("SELECT MAX(MaKhachHang) AS Largest_ma_nv FROM KHACHHANG");
             dtgvKhachHang.DataSource = bllclient.List_KhachHang();
             LoadGridView();
         }
@@ -126,6 +129,9 @@ namespace GUI
                 }
                 if (bllclient.insertCustomer(dto_KhachHang))
                 {
+                    txtMaKH.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaKH.Text = nuamua.CreateNewID("SELECT MAX(MaKhachHang) AS Largest_ma_nv FROM KHACHHANG");
                     dtgvKhachHang.DataSource = bllclient.List_KhachHang();
                     LoadGridView();
                     MessBox("Thêm khách hàng thành công");
@@ -135,7 +141,6 @@ namespace GUI
                     MessBox("Thêm khách hàng không thành công", true);
                 }
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaKH.Clear();
                 txtTenKH.Clear();
                 txtDiaChi.Clear();
                 txtSDT.Clear();
@@ -160,6 +165,9 @@ namespace GUI
                 );
                 if (bllclient.updateCustomer(dto_KhachHang))
                 {
+                    txtMaKH.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaKH.Text = nuamua.CreateNewID("SELECT MAX(MaKhachHang) AS Largest_ma_nv FROM KHACHHANG");
                     dtgvKhachHang.DataSource = bllclient.List_KhachHang();
                     LoadGridView();
                     MessBox("Sửa thông tin khách hàng thành công");
@@ -168,6 +176,10 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin khách hàng thất bại");
                 }
+                // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
+                txtTenKH.Clear();
+                txtDiaChi.Clear();
+                txtSDT.Clear();
             }
         }
 
@@ -180,15 +192,17 @@ namespace GUI
                 if (MaKH != null)
                 {
                     bllclient.deleteCustomer(MaKH);
+                    txtMaKH.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaKH.Text = nuamua.CreateNewID("SELECT MAX(MaKhachHang) AS Largest_ma_nv FROM KHACHHANG");
                     dtgvKhachHang.DataSource = bllclient.List_KhachHang();
                     LoadGridView();
-                    MessBox("Xóa nhân viên thành công");
+                    MessBox("Xóa khách hàng thành công");
                 }
                 else
                 {
-                    MessBox("Xóa nhân viên thất bại", true);
+                    MessBox("Xóa khách hàng thất bại", true);
                 }
-                txtMaKH.Clear();
                 txtTenKH.Clear();
                 txtDiaChi.Clear();
                 txtSDT.Clear();
@@ -198,7 +212,9 @@ namespace GUI
         // Reset Customer
         private void btnResetKH_Click(object sender, EventArgs e)
         {
-            txtMaKH.Text = null;
+            txtMaKH.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaKH.Text = nuamua.CreateNewID("SELECT MAX(MaKhachHang) AS Largest_ma_nv FROM KHACHHANG");
             txtTenKH.Text = null;
             txtDiaChi.Text = null;
             txtSDT.Text = null;
@@ -219,6 +235,11 @@ namespace GUI
         }
 
         private void txtSearchKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

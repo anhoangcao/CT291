@@ -50,6 +50,7 @@ namespace GUI
         // DataGridView
         private void LoadGridView()
         {
+            dtgvLC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtgvLC.Columns[0].HeaderText = "Mã lịch chiếu";
             dtgvLC.Columns[1].HeaderText = "Tên phòng";
             dtgvLC.Columns[2].HeaderText = "Tên phim";
@@ -63,10 +64,16 @@ namespace GUI
 
         private void formLichChieu_Load(object sender, EventArgs e)
         {
+            txtMaLC.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaLC.Text = nuamua.CreateNewID("SELECT MAX(MaLichChieu) AS Largest_ma_nv FROM LICHCHIEU");
             dtgvLC.DataSource = blllichchieu.List_LichChieu();
             LoadGridView();
             LoadComboBoxTenPhim();
             LoadComboBoxPhongChieu();
+            cbxPhim.SelectedIndex = -1;
+            cbxDOBLC.Value = DateTime.Today;
+            cbxLPC.SelectedIndex = -1;
         }
 
         private void dtgvLC_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -124,7 +131,9 @@ namespace GUI
                 }
                 if (blllichchieu.insertLC(dto_LichChieu))
                 {
-
+                    txtMaLC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLC.Text = nuamua.CreateNewID("SELECT MAX(MaLichChieu) AS Largest_ma_nv FROM LICHCHIEU");
                     dtgvLC.DataSource = blllichchieu.List_LichChieu();
                     LoadGridView();
                     MessBox("Thêm lịch chiếu phim thành công");
@@ -134,9 +143,10 @@ namespace GUI
                     MessBox("Thêm lịch chiếu phim không thành công", true);
                 }
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaLC.Clear();
+                cbxPhim.Text = null;
                 cbxPhim.SelectedIndex = -1;
                 cbxDOBLC.Value = DateTime.Today;
+                cbxLPC.Text = null;
                 cbxLPC.SelectedIndex = -1;
                 txtGV.Clear();
             }
@@ -162,6 +172,9 @@ namespace GUI
                 );
                 if (blllichchieu.updateLC(dto_LichChieu))
                 {
+                    txtMaLC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLC.Text = nuamua.CreateNewID("SELECT MAX(MaLichChieu) AS Largest_ma_nv FROM LICHCHIEU");
                     dtgvLC.DataSource = blllichchieu.List_LichChieu();
                     LoadGridView();
                     MessBox("Sửa thông tin lịch chiếu thành công");
@@ -170,6 +183,12 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin lịch chiếu thất bại");
                 }
+                cbxPhim.Text = null;
+                cbxPhim.SelectedIndex = -1;
+                cbxDOBLC.Value = DateTime.Today;
+                cbxLPC.Text = null;
+                cbxLPC.SelectedIndex = -1;
+                txtGV.Clear();
             }
         }
 
@@ -186,6 +205,9 @@ namespace GUI
                 if (MaLC != null)
                 {
                     blllichchieu.deleteLC(MaLC);
+                    txtMaLC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLC.Text = nuamua.CreateNewID("SELECT MAX(MaLichChieu) AS Largest_ma_nv FROM LICHCHIEU");
                     dtgvLC.DataSource = blllichchieu.List_LichChieu();
                     LoadGridView();
                     MessBox("Xóa lịch chiếu thành công");
@@ -194,9 +216,10 @@ namespace GUI
                 {
                     MessBox("Xóa lịch chiếu thất bại", true);
                 }
-                txtMaLC.Clear();
+                cbxPhim.Text = null;
                 cbxPhim.SelectedIndex = -1;
                 cbxDOBLC.Value = DateTime.Today;
+                cbxLPC.Text = null;
                 cbxLPC.SelectedIndex = -1;
                 txtGV.Clear();
             }
@@ -218,11 +241,15 @@ namespace GUI
 
         private void btnResetLC_Click(object sender, EventArgs e)
         {
-            txtMaLC.Text = null;
+            txtMaLC.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaLC.Text = nuamua.CreateNewID("SELECT MAX(MaLichChieu) AS Largest_ma_nv FROM LICHCHIEU");
             cbxPhim.Text = null;
+            cbxPhim.SelectedIndex = -1;
             cbxDOBLC.Value = DateTime.Today;
             cbxLPC.Text = null;
-            txtGV.Text = null;
+            cbxLPC.SelectedIndex = -1;
+            txtGV.Clear();
         }
 
         private void txtSearchLC_TextChanged(object sender, EventArgs e)

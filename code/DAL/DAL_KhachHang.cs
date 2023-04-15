@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_KhachHang
     {
-        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=FilmDatabase;integrated security=true";
+        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
 
         public DataTable ListKhachHang()
         {
@@ -126,10 +126,10 @@ namespace DAL
             try
             {
                 conn.Open();
-                string query = "SELECT * FROM KhachHang WHERE TenKhachHang LIKE '%" + kh + "%' ";
+                string query = "SELECT * FROM KhachHang WHERE TenKhachHang LIKE '%" + kh + "%' or DiaChi LIKE '%" + kh + "%' or DienThoai LIKE '%" + kh + "%' ";
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.CommandType = CommandType.Text;
-                comd.Parameters.AddWithValue("TenNV", kh);
+                comd.Parameters.AddWithValue("TenKH", kh);
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
                 return data;

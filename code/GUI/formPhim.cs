@@ -64,6 +64,9 @@ namespace GUI
 
         private void formPhim_Load(object sender, EventArgs e)
         {
+            txtMaP.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaP.Text = nuamua.CreateNewID("SELECT MAX(MaPhim) AS Largest_ma_nv FROM PHIM");
             dtgvPhim.DataSource = bllphim.List_Phim();
             LoadGridView();
             LoadComboBoxLoaiPhim();
@@ -136,6 +139,9 @@ namespace GUI
                 }
                 if (bllphim.insertPhim(dto_Phim))
                 {
+                    txtMaP.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaP.Text = nuamua.CreateNewID("SELECT MAX(MaPhim) AS Largest_ma_nv FROM PHIM");
                     dtgvPhim.DataSource = bllphim.List_Phim();
                     LoadGridView();
                     MessBox("Thêm phim mới thành công");
@@ -145,7 +151,6 @@ namespace GUI
                     MessBox("Thêm phim không thành công", true);
                 }
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaP.Clear();
                 txtTenP.Clear();
                 txtMoTa.Clear();
                 txtTL.Clear();
@@ -200,6 +205,9 @@ namespace GUI
                 );
                 if (bllphim.updatePhim(dto_Phim))
                 {
+                    txtMaP.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaP.Text = nuamua.CreateNewID("SELECT MAX(MaPhim) AS Largest_ma_nv FROM PHIM");
                     dtgvPhim.DataSource = bllphim.List_Phim();
                     LoadGridView();
                     MessBox("Sửa thông tin phim thành công");
@@ -208,6 +216,13 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin phim thất bại");
                 }
+                txtTenP.Clear();
+                txtMoTa.Clear();
+                txtTL.Clear();
+                txtSX.Clear();
+                txtDD.Clear();
+                cbxP.SelectedIndex = -1;
+                picbPhim.Image = null;
             }
         }
 
@@ -220,6 +235,9 @@ namespace GUI
                 if (MaP != null)
                 {
                     bllphim.deletePhim(MaP);
+                    txtMaP.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaP.Text = nuamua.CreateNewID("SELECT MAX(MaPhim) AS Largest_ma_nv FROM PHIM");
                     dtgvPhim.DataSource = bllphim.List_Phim();
                     LoadGridView();
                     MessBox("Xóa phim thành công");
@@ -228,7 +246,6 @@ namespace GUI
                 {
                     MessBox("Xóa phim thất bại", true);
                 }
-                txtMaP.Clear();
                 txtTenP.Clear();
                 txtMoTa.Clear();
                 txtTL.Clear();
@@ -241,12 +258,15 @@ namespace GUI
 
         private void btnResetP_Click(object sender, EventArgs e)
         {
-            txtMaP.Text = null;
+            txtMaP.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaP.Text = nuamua.CreateNewID("SELECT MAX(MaPhim) AS Largest_ma_nv FROM PHIM");
             txtTenP.Text = null;
             txtMoTa.Text = null;
             txtTL.Text = null;
             txtSX.Text = null;
             txtDD.Text = null;
+            cbxP.Text = null;
             cbxP.SelectedIndex = -1;
             picbPhim.Image = null;
         }

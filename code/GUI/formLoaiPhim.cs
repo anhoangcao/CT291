@@ -57,6 +57,9 @@ namespace GUI
 
         private void formLoaiPhim_Load(object sender, EventArgs e)
         {
+            txtMaLoai.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaLoai.Text = nuamua.CreateNewID("SELECT MAX(MaLoaiPhim) AS Largest_ma_nv FROM LOAIPHIM");
             dtgvLP.DataSource = bllloaiphim.List_LoaiPhim();
             LoadGridView();
         }
@@ -106,6 +109,9 @@ namespace GUI
                 }
                 if (bllloaiphim.insertLP(dto_LoaiPhim))
                 {
+                    txtMaLoai.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLoai.Text = nuamua.CreateNewID("SELECT MAX(MaLoaiPhim) AS Largest_ma_nv FROM LOAIPHIM");
                     dtgvLP.DataSource = bllloaiphim.List_LoaiPhim();
                     LoadGridView();
                     MessBox("Thêm phòng thành công");
@@ -115,7 +121,6 @@ namespace GUI
                     MessBox("Thêm phòng không thành công", true);
                 }
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaLoai.Clear();
                 txtTenLoai.Clear();
                 txtMoTa.Clear();
                 
@@ -139,6 +144,9 @@ namespace GUI
                 );
                 if (bllloaiphim.updateLP(dto_LoaiPhim))
                 {
+                    txtMaLoai.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLoai.Text = nuamua.CreateNewID("SELECT MAX(MaLoaiPhim) AS Largest_ma_nv FROM LOAIPHIM");
                     dtgvLP.DataSource = bllloaiphim.List_LoaiPhim();
                     LoadGridView();
                     MessBox("Sửa thông tin loại phim thành công");
@@ -147,6 +155,8 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin loại phim thất bại");
                 }
+                txtTenLoai.Clear();
+                txtMoTa.Clear();
             }
         }
 
@@ -159,6 +169,9 @@ namespace GUI
                 if (MaLP != null)
                 {
                     bllloaiphim.deleteLP(MaLP);
+                    txtMaLoai.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaLoai.Text = nuamua.CreateNewID("SELECT MAX(MaLoaiPhim) AS Largest_ma_nv FROM LOAIPHIM");
                     dtgvLP.DataSource = bllloaiphim.List_LoaiPhim();
                     LoadGridView();
                     MessBox("Xóa loại phim thành công");
@@ -167,7 +180,6 @@ namespace GUI
                 {
                     MessBox("Xóa Loại phim thất bại", true);
                 }
-                txtMaLoai.Clear();
                 txtTenLoai.Clear();
                 txtMoTa.Clear();
             }
@@ -176,7 +188,9 @@ namespace GUI
         // Reset
         private void btnResetLP_Click(object sender, EventArgs e)
         {
-            txtMaLoai.Text = null;
+            txtMaLoai.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaLoai.Text = nuamua.CreateNewID("SELECT MAX(MaLoaiPhim) AS Largest_ma_nv FROM LOAIPHIM");
             txtTenLoai.Text = null;
             txtMoTa.Text = null;
         }

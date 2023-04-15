@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_PhongChieu
     {
-        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=FilmDatabase1;integrated security=true";
+        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
         public DataTable ListPhongChieu()
         {
             SqlConnection conn = new SqlConnection(stringConnect);

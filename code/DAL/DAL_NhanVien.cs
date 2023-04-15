@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DAL_NhanVien
     {
-        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=FilmDatabase;integrated security=true";
+        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
 
         public DataTable ListNhanVien()
         {
@@ -130,7 +130,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                string query = "SELECT * FROM NhanVien WHERE TenNhanVien LIKE '%" + nv + "%' ";
+                string query = "SELECT * FROM NhanVien WHERE TenNhanVien LIKE '%" + nv + "%' or DiaChi LIKE '%" + nv + "%' or DienThoai LIKE '%" + nv + "%'";
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.CommandType = CommandType.Text;
                 comd.Parameters.AddWithValue("HoTen", nv);

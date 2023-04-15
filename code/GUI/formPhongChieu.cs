@@ -49,6 +49,9 @@ namespace GUI
         }
         private void formPhongChieu_Load(object sender, EventArgs e)
         {
+            txtMaPC.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaPC.Text = nuamua.CreateNewID("SELECT MAX(MaPhongChieu) AS Largest_ma_nv FROM PHONGCHIEU");
             dtgvPhongChieu.DataSource = bllphongchieu.List_PhongChieu();
             LoadGridView();
         }
@@ -106,6 +109,9 @@ namespace GUI
                 }
                 if (bllphongchieu.insertPC(dto_PhongChieu))
                 {
+                    txtMaPC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaPC.Text = nuamua.CreateNewID("SELECT MAX(MaPhongChieu) AS Largest_ma_nv FROM PHONGCHIEU");
                     dtgvPhongChieu.DataSource = bllphongchieu.List_PhongChieu();
                     LoadGridView();
                     MessBox("Thêm phòng thành công");
@@ -115,7 +121,6 @@ namespace GUI
                     MessBox("Thêm phòng không thành công", true);
                 }
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaPC.Clear();
                 txtTenPC.Clear();
                 txtSoCho.Clear();
                 txtTenMH.Clear();
@@ -142,6 +147,9 @@ namespace GUI
                 );
                 if (bllphongchieu.updatePC(dto_PhongChieu))
                 {
+                    txtMaPC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaPC.Text = nuamua.CreateNewID("SELECT MAX(MaPhongChieu) AS Largest_ma_nv FROM PHONGCHIEU");
                     dtgvPhongChieu.DataSource = bllphongchieu.List_PhongChieu();
                     LoadGridView();
                     MessBox("Sửa thông tin phòng thành công");
@@ -150,6 +158,10 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin phòng thất bại");
                 }
+                txtTenPC.Clear();
+                txtSoCho.Clear();
+                txtTenMH.Clear();
+                guna2TextBox2.Clear();
             }
         }
 
@@ -162,15 +174,18 @@ namespace GUI
                 if (MaPC != null )
                 {
                     bllphongchieu.deletePC(MaPC);
+                    txtMaPC.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaPC.Text = nuamua.CreateNewID("SELECT MAX(MaPhongChieu) AS Largest_ma_nv FROM PHONGCHIEU");
                     dtgvPhongChieu.DataSource = bllphongchieu.List_PhongChieu();
                     LoadGridView();
                     MessBox("Xóa phòng thành công");
+                    
                 }
                 else
                 {
                     MessBox("Xóa phòng thất bại", true);
                 }
-                txtMaPC.Clear();
                 txtTenPC.Clear();
                 txtSoCho.Clear();
                 txtTenMH.Clear();
@@ -181,7 +196,9 @@ namespace GUI
         // Reset
         private void btnResetPC_Click(object sender, EventArgs e)
         {
-            txtMaPC.Text = null;
+            txtMaPC.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaPC.Text = nuamua.CreateNewID("SELECT MAX(MaPhongChieu) AS Largest_ma_nv FROM PHONGCHIEU");
             txtTenPC.Text = null;
             txtSoCho.Text = null;
             txtTenMH.Text = null;

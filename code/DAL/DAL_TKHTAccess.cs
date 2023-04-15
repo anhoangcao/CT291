@@ -10,10 +10,5 @@ namespace DAL
 {
     public class DAL_TKHTAccess:DAL_TKHT
     {
-        public string Checklogin(DTO_TKHT tkht)
-        {
-            string info = CheckloginDTO(tkht);
-            return info;
-        }
     }
 }

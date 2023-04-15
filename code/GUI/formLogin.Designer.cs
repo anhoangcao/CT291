@@ -178,7 +178,7 @@
             this.guna2GradientButton1.Size = new System.Drawing.Size(260, 40);
             this.guna2GradientButton1.TabIndex = 2;
             this.guna2GradientButton1.Text = "Đăng nhập";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click_1);
             // 
             // txtMatkhau
             // 
@@ -265,6 +265,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formLogin";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

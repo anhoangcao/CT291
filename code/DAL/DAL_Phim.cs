@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_Phim
     {
-        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=FilmDatabase1;integrated security=true";
+        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
         public DataTable ListPhim()
         {
             SqlConnection conn = new SqlConnection(stringConnect);
@@ -134,7 +134,7 @@ namespace DAL
                 string query = "SELECT a.MaPhim, a.TenPhim, a.MoTa, b.TenLoaiPhim, a.ThoiLuong, a.SanXuat, a.DaoDien, a.HinhAnh " +
                                "FROM dbo.Phim as a " +
                                "JOIN dbo.LoaiPhim as b ON a.MaLoaiPhim = b.MaLoaiPhim " +
-                               "WHERE a.TenPhim LIKE '%' + @p + '%' or b.TenLoaiPhim LIKE '%' + @p + '%'";
+                               "WHERE a.TenPhim LIKE '%' + @p + '%' or b.TenLoaiPhim LIKE '%' + @p + '%' or a.SanXuat LIKE '%' + @p + '%'";
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.CommandType = CommandType.Text;
                 comd.Parameters.AddWithValue("@p", p);

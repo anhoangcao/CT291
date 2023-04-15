@@ -38,52 +38,39 @@ namespace GUI
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            //formMain fMain = new formMain();
-            //this.Hide();
-            //fMain.ShowDialog();
-            //this.Show();
+                       
+        }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
+        {
             tkht.Tkht_Taikhoan = txtTaikhoan.Text;
             tkht.Tkht_Matkhau = txtMatkhau.Text;
 
-            string getuser = tkhtbll.CheckLogin(tkht);
-
             // Trả lại kết quả nếu không đúng
-            switch (getuser)
-            {
-                case "requeid_taikhoan":
-                    MessageBox.Show("Bạn chưa nhập tài khoản");
-                    return;
-
-                case "requeid_password":
-                    MessageBox.Show("Bạn chưa nhập mật khẩu");
-                    return;
-
-                case "Tài khoản hoặc mật khẩu không đúng!":
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
-                    return;
-            }
-
-            if(txtTaikhoan.Text == "admin" && txtMatkhau.Text == "12345")
+            if (txtTaikhoan.Text == "admin" && txtMatkhau.Text == "12345")
             {
                 formMain fMain = new formMain();
                 this.Hide();
                 fMain.ShowDialog();
                 this.Show();
-            } else if(txtTaikhoan.Text == "user" && txtMatkhau.Text == "67890")
+            }
+            else if (txtTaikhoan.Text == "user" && txtMatkhau.Text == "67890")
             {
                 formMainNV fMainnv = new formMainNV();
                 this.Hide();
                 fMainnv.ShowDialog();
                 this.Show();
             }
-
-            
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

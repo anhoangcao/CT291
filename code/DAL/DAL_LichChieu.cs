@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_LichChieu
     {
-        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=FilmDatabase1;integrated security=true";
+        string stringConnect = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
         public DataTable ListLichChieu()
         {
             SqlConnection conn = new SqlConnection(stringConnect);
@@ -132,7 +132,7 @@ namespace DAL
                                "FROM dbo.LichChieu as a " +
                                "JOIN dbo.PhongChieu as b ON a.MaPhongChieu = b.MaPhongChieu " +
                                "JOIN dbo.Phim as c ON a.MaPhim = c.MaPhim " +
-                               "WHERE c.TenPhim LIKE '%' + @lc + '%' or a.NgayChieu LIKE '%' + @lc + '%' or b.TenPhongChieu LIKE '%' + @lc + '%'";
+                               "WHERE c.TenPhim LIKE '%' + @lc + '%' OR CONVERT(NVARCHAR(10), a.NgayChieu, 103) LIKE '%' + @lc + '%' OR b.TenPhongChieu LIKE '%' + @lc + '%'";
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.CommandType = CommandType.Text;
                 comd.Parameters.AddWithValue("@lc", lc);
@@ -140,7 +140,7 @@ namespace DAL
                 data.Load(comd.ExecuteReader());
                 return data;
             }
-            finally
+                finally
             {
                 conn.Close();
             }

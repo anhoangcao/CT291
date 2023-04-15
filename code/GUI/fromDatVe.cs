@@ -72,5 +72,13 @@ namespace GUI
             panelMain.Controls.Add(formLoaiPhim);
             formLoaiPhim.Show();
         }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+            formMain fmainnv = new formMain();
+            this.Hide();
+            fmainnv.ShowDialog();
+            this.Show();
+        }
     }
 }

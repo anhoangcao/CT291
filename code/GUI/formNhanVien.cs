@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using DTO;
 using Guna.UI2.WinForms;
 using System;
@@ -56,6 +57,9 @@ namespace GUI
 
         private void formNhanVien_Load(object sender, EventArgs e)
         {
+            txtMaNV.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaNV.Text = nuamua.CreateNewID("SELECT MAX(MaNhanVien) AS Largest_ma_nv FROM NHANVIEN");
             dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
             LoadGridView();
         }
@@ -97,16 +101,19 @@ namespace GUI
                 }
                 if (bllstaff.insertStaff(dto_NhanVien))
                 {
+                    txtMaNV.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaNV.Text = nuamua.CreateNewID("SELECT MAX(MaNhanVien) AS Largest_ma_nv FROM NHANVIEN");
                     dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
                     LoadGridView();
                     MessBox("Thêm nhân viên thành công");
+                    
                 }
                 else
                 {
                     MessBox("Thêm nhân viên không thành công", true);
                 }   
                 // Clear các trường nhập liệu để chuẩn bị nhập nhân viên mới
-                txtMaNV.Clear();
                 txtHoTenNV.Clear();
                 btnDOB.Value = DateTime.Today;
                 cbxGT.SelectedIndex = -1;
@@ -161,7 +168,10 @@ namespace GUI
                     txtSDT.Text
                 );
                 if (bllstaff.updateStaff(dto_NhanVien))
-                {                  
+                {
+                    txtMaNV.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaNV.Text = nuamua.CreateNewID("SELECT MAX(MaNhanVien) AS Largest_ma_nv FROM NHANVIEN");
                     dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
                     LoadGridView();
                     MessBox("Sửa thông tin nhân viên thành công");
@@ -170,6 +180,11 @@ namespace GUI
                 {
                     MessBox("Sửa thông tin nhân viên thất bại");
                 }
+                txtHoTenNV.Clear();
+                btnDOB.Value = DateTime.Today;
+                cbxGT.SelectedIndex = -1;
+                txtDiaChi.Clear();
+                txtSDT.Clear();
             }
         }
 
@@ -181,6 +196,9 @@ namespace GUI
                 if (MaNV != null)
                 {
                     bllstaff.deleteStaff(MaNV);
+                    txtMaNV.ReadOnly = true;
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtMaNV.Text = nuamua.CreateNewID("SELECT MAX(MaNhanVien) AS Largest_ma_nv FROM NHANVIEN");
                     dtgvNhanVien.DataSource = bllstaff.List_NhanVien();
                     LoadGridView();
                     MessBox("Xóa nhân viên thành công");
@@ -189,7 +207,6 @@ namespace GUI
                 {
                     MessBox("Xóa nhân viên thất bại", true);
                 }
-                txtMaNV.Clear();
                 txtHoTenNV.Clear();
                 btnDOB.Value = DateTime.Today;
                 cbxGT.SelectedIndex = -1;
@@ -206,6 +223,9 @@ namespace GUI
             cbxGT.Text = null;
             txtDiaChi.Text = null;
             txtSDT.Text = null;
+            txtMaNV.ReadOnly = true;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtMaNV.Text = nuamua.CreateNewID("SELECT MAX(MaNhanVien) AS Largest_ma_nv FROM NHANVIEN");
         }
 
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)

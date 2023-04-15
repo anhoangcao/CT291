@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvLC = new System.Windows.Forms.DataGridView();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbxLPC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxDOBLC = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,8 +52,6 @@
             this.btnThemLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchLC = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearchLC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbxPhim = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLC)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchLC)).BeginInit();
@@ -55,15 +59,49 @@
             // 
             // dtgvLC
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvLC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvLC.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvLC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvLC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvLC.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dtgvLC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvLC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvLC.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvLC.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvLC.EnableHeadersVisualStyles = false;
+            this.dtgvLC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvLC.Location = new System.Drawing.Point(15, 283);
             this.dtgvLC.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvLC.Name = "dtgvLC";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvLC.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvLC.RowHeadersVisible = false;
             this.dtgvLC.RowHeadersWidth = 51;
             this.dtgvLC.RowTemplate.Height = 24;
+            this.dtgvLC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvLC.Size = new System.Drawing.Size(797, 206);
-            this.dtgvLC.TabIndex = 37;
+            this.dtgvLC.TabIndex = 55;
             this.dtgvLC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvLC_CellContentClick);
             // 
             // guna2GroupBox1
@@ -91,6 +129,36 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(797, 208);
             this.guna2GroupBox1.TabIndex = 42;
             this.guna2GroupBox1.Text = "Thông tin lịch chiếu";
+            // 
+            // cbxPhim
+            // 
+            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
+            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
+            this.cbxPhim.BorderRadius = 3;
+            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbxPhim.ForeColor = System.Drawing.Color.White;
+            this.cbxPhim.ItemHeight = 30;
+            this.cbxPhim.Location = new System.Drawing.Point(160, 149);
+            this.cbxPhim.Name = "cbxPhim";
+            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
+            this.cbxPhim.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Location = new System.Drawing.Point(48, 160);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Tên phim";
             // 
             // cbxLPC
             // 
@@ -368,36 +436,6 @@
             this.txtSearchLC.Size = new System.Drawing.Size(194, 31);
             this.txtSearchLC.TabIndex = 57;
             this.txtSearchLC.TextChanged += new System.EventHandler(this.txtSearchLC_TextChanged);
-            // 
-            // cbxPhim
-            // 
-            this.cbxPhim.BackColor = System.Drawing.Color.Transparent;
-            this.cbxPhim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.cbxPhim.BorderRadius = 3;
-            this.cbxPhim.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPhim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxPhim.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cbxPhim.ForeColor = System.Drawing.Color.White;
-            this.cbxPhim.ItemHeight = 30;
-            this.cbxPhim.Location = new System.Drawing.Point(160, 149);
-            this.cbxPhim.Name = "cbxPhim";
-            this.cbxPhim.Size = new System.Drawing.Size(194, 36);
-            this.cbxPhim.TabIndex = 50;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(48, 160);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Tên phim";
             // 
             // formLichChieu
             // 
