@@ -56,5 +56,13 @@ namespace GUI
             fnhanvien.ShowDialog();
             this.Show();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            formTaiKhoan ftaikhoan = new formTaiKhoan();
+            this.Hide();
+            ftaikhoan.ShowDialog();
+            this.Show();
+        }
     }
 }

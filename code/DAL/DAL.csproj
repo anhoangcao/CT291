@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_Account.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_LichChieu.cs" />
     <Compile Include="DAL_LoaiPhim.cs" />

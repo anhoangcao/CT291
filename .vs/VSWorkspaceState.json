@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    "\\GUI"
+    "",
+    "\\code",
+    "\\code\\GUI"
   ],
+  "SelectedNode": "\\code\\GUI\\formPhim.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -50,7 +50,7 @@ namespace GUI
         // DataGridView
         private void LoadGridView()
         {
-            dtgvLC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtgvLC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvLC.Columns[0].HeaderText = "Mã lịch chiếu";
             dtgvLC.Columns[1].HeaderText = "Tên phòng";
             dtgvLC.Columns[2].HeaderText = "Tên phim";

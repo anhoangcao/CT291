@@ -64,7 +64,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.SandyBrown;
             this.guna2Button1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(131, 151);
+            this.guna2Button1.Location = new System.Drawing.Point(128, 110);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(220, 52);
             this.guna2Button1.TabIndex = 42;
@@ -81,7 +81,7 @@
             this.guna2Button4.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.guna2Button4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(460, 151);
+            this.guna2Button4.Location = new System.Drawing.Point(457, 110);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(220, 52);
             this.guna2Button4.TabIndex = 41;
@@ -100,7 +100,7 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(669, 9);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(682, 9);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(117, 40);
             this.guna2GradientButton1.TabIndex = 40;
@@ -112,12 +112,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(181, 18);
+            this.label1.Location = new System.Drawing.Point(193, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 29);
+            this.label1.Size = new System.Drawing.Size(475, 29);
             this.label1.TabIndex = 43;
-            this.label1.Text = "NHAN VIEN QUAN LY ";
+            this.label1.Text = "NHAN VIEN BAN VE";
             // 
             // guna2ControlBox2
             // 

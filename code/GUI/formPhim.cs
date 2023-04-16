@@ -48,7 +48,7 @@ namespace GUI
         // DataGridView
         private void LoadGridView()
         {
-            dtgvPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtgvPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvPhim.Columns[0].HeaderText = "Mã phim";
             dtgvPhim.Columns[1].HeaderText = "Tên phim";
             dtgvPhim.Columns[2].HeaderText = "Mô tả";

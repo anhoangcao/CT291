@@ -110,6 +110,12 @@
     <Compile Include="formPhongChieu.Designer.cs">
       <DependentUpon>formPhongChieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="formTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTaiKhoan.Designer.cs">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fromDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formPhongChieu.resx">
       <DependentUpon>formPhongChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTaiKhoan.resx">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fromDatVe.resx">
       <DependentUpon>fromDatVe.cs</DependentUpon>

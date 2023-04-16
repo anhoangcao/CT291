@@ -108,12 +108,13 @@
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.guna2Button3.Location = new System.Drawing.Point(564, 149);
+            this.guna2Button3.Location = new System.Drawing.Point(289, 149);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(222, 52);
             this.guna2Button3.TabIndex = 39;
             this.guna2Button3.Text = "Quản lý tài khoản";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -125,12 +126,12 @@
             this.guna2Button2.FillColor = System.Drawing.Color.SandyBrown;
             this.guna2Button2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.guna2Button2.Location = new System.Drawing.Point(288, 149);
+            this.guna2Button2.Location = new System.Drawing.Point(566, 149);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(220, 52);
             this.guna2Button2.TabIndex = 38;
-            this.guna2Button2.Text = "Quản lý khách hàng";
+            this.guna2Button2.Text = "Quản lý doanh thu";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
