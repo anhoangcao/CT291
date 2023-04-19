@@ -49,6 +49,7 @@
     <Compile Include="DTO_Phim.cs" />
     <Compile Include="DTO_PhongChieu.cs" />
     <Compile Include="DTO_TKHT.cs" />
+    <Compile Include="DTO_Ve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

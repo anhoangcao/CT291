@@ -294,6 +294,11 @@ namespace GUI
                 dtgvPhim.DataSource = table;
             }
         }
+
+        private void cbxP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

@@ -116,6 +116,12 @@
     <Compile Include="formTaiKhoan.Designer.cs">
       <DependentUpon>formTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="formVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVe.Designer.cs">
+      <DependentUpon>formVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="fromDatVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formTaiKhoan.resx">
       <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVe.resx">
+      <DependentUpon>formVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fromDatVe.resx">
       <DependentUpon>fromDatVe.cs</DependentUpon>
@@ -198,6 +207,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\app-icon.png" />
+    <None Include="Resources\ve.png" />
     <None Include="Resources\ticket_86147.png" />
     <None Include="Resources\weekly-calendar-outline-event-interface-symbol_icon-icons.com_73108.png" />
     <None Include="Resources\video_47669.png" />
@@ -209,6 +219,11 @@
     <None Include="Resources\cd_47762.png" />
     <None Include="Resources\calendar-weekly_icon-icons.com_56832.png" />
     <None Include="Resources\cinema130_41703.png" />
+    <None Include="Resources\Mayquay.png" />
+    <None Include="Resources\Mayquay1.png" />
+    <None Include="Resources\CD.png" />
+    <None Include="Resources\Clapper.png" />
+    <None Include="Resources\LCP.png" />
     <Content Include="Resources\phim.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

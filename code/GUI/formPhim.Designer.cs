@@ -234,6 +234,7 @@
             this.cbxP.Name = "cbxP";
             this.cbxP.Size = new System.Drawing.Size(160, 36);
             this.cbxP.TabIndex = 49;
+            this.cbxP.SelectedIndexChanged += new System.EventHandler(this.cbxP_SelectedIndexChanged);
             // 
             // btnDongPC
             // 

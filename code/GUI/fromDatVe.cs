@@ -45,12 +45,12 @@ namespace GUI
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            formLichChieu formLichChieu = new formLichChieu();
+            formVe formve = new formVe();
             panelMain.Controls.Clear();
-            formLichChieu.TopLevel = false;
-            formLichChieu.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(formLichChieu);
-            formLichChieu.Show();
+            formve.TopLevel = false;
+            formve.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(formve);
+            formve.Show();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
