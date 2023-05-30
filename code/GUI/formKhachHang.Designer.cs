@@ -40,7 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDongKH = new Guna.UI2.WinForms.Guna2Button();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
@@ -99,7 +99,7 @@
             this.guna2GroupBox1.Controls.Add(this.label5);
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.label1);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button3);
+            this.guna2GroupBox1.Controls.Add(this.btnDongKH);
             this.guna2GroupBox1.Controls.Add(this.txtDiaChi);
             this.guna2GroupBox1.Controls.Add(this.txtSDT);
             this.guna2GroupBox1.Controls.Add(this.txtTenKH);
@@ -113,7 +113,7 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(729, 165);
             this.guna2GroupBox1.TabIndex = 31;
-            this.guna2GroupBox1.Text = "Quản lý khách hàng";
+            this.guna2GroupBox1.Text = "Thông tin khách hàng";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // label6
@@ -166,23 +166,23 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Họ tên";
             // 
-            // guna2Button3
+            // btnDongKH
             // 
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Tomato;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(637, 11);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(73, 31);
-            this.guna2Button3.TabIndex = 36;
-            this.guna2Button3.Text = "Đóng";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnDongKH.BorderRadius = 5;
+            this.btnDongKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDongKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDongKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDongKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDongKH.FillColor = System.Drawing.Color.Tomato;
+            this.btnDongKH.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDongKH.ForeColor = System.Drawing.Color.White;
+            this.btnDongKH.Location = new System.Drawing.Point(649, 8);
+            this.btnDongKH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDongKH.Name = "btnDongKH";
+            this.btnDongKH.Size = new System.Drawing.Size(73, 31);
+            this.btnDongKH.TabIndex = 36;
+            this.btnDongKH.Text = "Đóng";
+            this.btnDongKH.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // txtDiaChi
             // 
@@ -502,7 +502,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnDongKH;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private Guna.UI2.WinForms.Guna2TextBox txtTenKH;

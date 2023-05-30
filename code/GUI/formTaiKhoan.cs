@@ -199,5 +199,13 @@ namespace GUI
             flogin.ShowDialog();
             this.Show();
         }
+
+        private void BtnDongTK_Click(object sender, EventArgs e)
+        {
+            formMain flogin = new formMain();
+            this.Hide();
+            flogin.ShowDialog();
+            this.Show();
+        }
     }
 }

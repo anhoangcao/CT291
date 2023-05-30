@@ -75,7 +75,7 @@ namespace GUI
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)
         {
-            formMain fmainnv = new formMain();
+            formMainNV fmainnv = new formMainNV();
             this.Hide();
             fmainnv.ShowDialog();
             this.Show();

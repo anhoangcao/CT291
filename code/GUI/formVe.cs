@@ -1,11 +1,14 @@
 ﻿using BLL;
 using DAL;
 using DTO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,22 +17,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace GUI
 {
     public partial class formVe : Form
     {
-        
 
-           
+
+
         public formVe()
         {
             InitializeComponent();
 
-        }      
+        }
 
         private void buttonDatVe_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -70,7 +75,7 @@ namespace GUI
             }
         }
 
-        
+
 
         private void formVe_Load(object sender, EventArgs e)
         {
@@ -78,15 +83,17 @@ namespace GUI
             LoadComboBoxMaLC();
         }
 
-        
+
 
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         string connectionString = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
+        private List<string> selectedSeats = new List<string>();
+        private string maxxx = "";
         private void Seat_Click(object sender, EventArgs e)
         {
             Button seat = sender as Button;
@@ -120,8 +127,21 @@ namespace GUI
                 return;
             }
 
-            // Đánh dấu ghế được chọn
-            seat.BackColor = Color.Blue;
+            // Kiểm tra xem ghế đã được chọn hay chưa
+            if (selectedSeats.Contains(seatNumber))
+            {
+                seat.BackColor = Color.White;
+                selectedSeats.Remove(seatNumber);
+            } else
+            {
+                // Đánh dấu ghế được chọn
+                seat.BackColor = Color.Blue;
+                selectedSeats.Add(seatNumber);
+            }
+
+
+
+            maxxx = string.Join(",", selectedSeats);
         }
 
         private void gunaDV_Click(object sender, EventArgs e)
@@ -183,7 +203,7 @@ namespace GUI
             DialogResult result = MessageBox.Show("Bạn có chắc muốn đặt " + seatNumbers.Count + " vé?", "Xác nhận đặt vé", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                
+
                 // Thực hiện thêm thông tin đặt vé vào CSDL
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -209,9 +229,9 @@ namespace GUI
                     {
                         control.BackColor = Color.Red;
                         control.Enabled = false;
-                        
+
                     }
-                    
+
                 }
 
                 //// Reset lại
@@ -254,7 +274,7 @@ namespace GUI
         {
             DAL_KhachHang kh = new DAL_KhachHang();
             DataTable dt = kh.ListKhachHang();
-            cbxCustomerIdTextBox.DisplayMember = "MaKhachHang"; 
+            cbxCustomerIdTextBox.DisplayMember = "MaKhachHang";
             cbxCustomerIdTextBox.ValueMember = "TenKhachHang";
             cbxCustomerIdTextBox.DataSource = dt;
         }
@@ -277,7 +297,7 @@ namespace GUI
                 string ma = cbxShowtimeIdTextBox.Text;
 
                 // Tạo câu truy vấn
-                string query = "SELECT b.TenPhim, b.HinhAnh, a.GiaVe FROM LichChieu AS a INNER JOIN Phim AS b ON a.MaPhim = b.MaPhim WHERE MaLichChieu = @ma";
+                string query = "SELECT b.TenPhim, b.HinhAnh, a.NgayChieu, a.GiaVe FROM LichChieu AS a INNER JOIN Phim AS b ON a.MaPhim = b.MaPhim WHERE MaLichChieu = @ma";
 
                 // Tạo đối tượng SqlCommand và thêm tham số @ma
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -294,17 +314,19 @@ namespace GUI
                     reader.Read();
                     txtHienPhim.Text = reader["TenPhim"].ToString();
                     txtHienGiaVe.Text = reader["GiaVe"].ToString();
+                    txtHienNC.Text = reader["NgayChieu"].ToString();
                     // Kiểm tra nếu có hình ảnh phim, hiển thị hình ảnh
                     if (!reader.IsDBNull(reader.GetOrdinal("HinhAnh")))
                     {
                         byte[] imageBytes = (byte[])reader["HinhAnh"];
                         MemoryStream memoryStream = new MemoryStream(imageBytes);
-                        picHienAnh.Image = Image.FromStream(memoryStream);
+                        picHienAnh.Image = System.Drawing.Image.FromStream(memoryStream);
                     }
                     else
                     {
                         picHienAnh.Image = null;
                     }
+
                     while (reader.Read())
                     {
                         // Lấy thông tin mã ghế ngồi
@@ -327,6 +349,7 @@ namespace GUI
                     // Nếu không có dữ liệu trả về, xóa nội dung của txtHienPhim và txtHienGiaVe
                     txtHienPhim.Text = "";
                     txtHienGiaVe.Text = "";
+                    txtHienNC.Text = "";
                     picHienAnh.Image = null;
                 }
 
@@ -342,6 +365,8 @@ namespace GUI
                 // Nếu không có lựa chọn, xóa nội dung của txtHienPhim và txtHienGiaVe
                 txtHienPhim.Text = "";
                 txtHienGiaVe.Text = "";
+                txtHienNC.Text = "";
+
             }
 
         }
@@ -368,6 +393,111 @@ namespace GUI
         private void txtHienGiaVe_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrintVe_Click(object sender, EventArgs e)
+        {
+            // Kết nối CSDL và truy vấn dữ liệu vào DataTable
+            string connectionString = @"Server=DESKTOP-0MK0TTK;Database=tesst;integrated security=true";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                if (cbxShowtimeIdTextBox.SelectedItem != null)
+                {
+                    // Lấy mã lịch chiếu từ ComboBox
+                    string ma = cbxShowtimeIdTextBox.Text;
+
+                    // Tạo câu truy vấn
+                    string query = "SELECT b.TenPhim, b.HinhAnh, a.GiaVe, a.NgayChieu FROM LichChieu AS a INNER JOIN Phim AS b ON a.MaPhim = b.MaPhim WHERE MaLichChieu = @ma";
+
+                    // Tạo đối tượng SqlCommand và thêm tham số @ma
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@ma", ma);
+
+                    // Thực thi câu truy vấn và đọc dữ liệu trả về
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        // Lấy thông tin phim đầu tiên trả về
+                        reader.Read();
+                        string tenPhim = reader["TenPhim"].ToString();
+                        string giaVe = reader["GiaVe"].ToString();
+                        string hinhAnh = reader["HinhAnh"].ToString();
+
+
+                        // Kiểm tra nếu có hình ảnh phim, lấy dữ liệu hình ảnh
+                        byte[] imageBytes = null;
+                        if (!reader.IsDBNull(reader.GetOrdinal("HinhAnh")))
+                        {
+                            imageBytes = (byte[])reader["HinhAnh"];
+                        }
+                        reader.Close();
+
+                        // Tạo đối tượng Document của iTextSharp để tạo file PDF
+                        Document document = new Document(PageSize.A4, 50, 50, 25, 25);
+
+                        document.Open();
+                        if (imageBytes != null)
+                        {
+                            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(imageBytes);
+                            image.ScaleAbsolute(200, 200);
+                            image.Alignment = Element.ALIGN_CENTER;
+                            document.Add(image);
+                        }
+
+                        // Thiết lập thông tin cho file PDF
+                        PdfWriter writer = PdfWriter.GetInstance(document, new FileStream("VeXemPhim.pdf", FileMode.Create));
+                        document.Open();
+                        document.AddTitle("Danh sách đặt vé xem phim");
+                        document.AddAuthor("Tên tác giả");
+                        document.AddCreator("Tên creator");
+
+                        // Thêm tiêu đề cho file PDF
+                        Paragraph title = new Paragraph("VÉ XEM PHIM");
+                        title.Alignment = Element.ALIGN_CENTER;
+                        document.Add(title);
+
+                        // Thêm tên phim và giá vé vào file PDF
+                        System.Drawing.Font fontTenPhim = new System.Drawing.Font("Arial", 12);
+                        BaseFont bf = BaseFont.CreateFont("C:\\Arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        iTextSharp.text.Font iTextSharpFontTenPhim = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
+                        iTextSharpFontTenPhim.Color = new iTextSharp.text.BaseColor(System.Drawing.Color.Black);
+
+
+                        Paragraph tenPhimPara = new Paragraph("Tên phim: " + tenPhim, iTextSharpFontTenPhim);
+                        document.Add(tenPhimPara);
+
+                        Paragraph ngayChieu = new Paragraph("Ngày chiếu: " + txtHienNC.Text, iTextSharpFontTenPhim);
+                        document.Add(ngayChieu);
+
+                        Paragraph gh = new Paragraph("Mã ghế ngồi: " + maxxx, iTextSharpFontTenPhim);
+                        document.Add(gh);
+
+                        Paragraph giaVePara = new Paragraph("Giá vé: " + giaVe, iTextSharpFontTenPhim);
+                        document.Add(giaVePara); 
+
+                        Paragraph tongTien = new Paragraph("Tổng tiền: " + totalPriceTextBox.Text, iTextSharpFontTenPhim);
+                        document.Add(tongTien);
+
+                        // Thêm hình ảnh phim vào file PDF
+                        if (imageBytes != null)
+                        {
+                            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(imageBytes);
+                            image.ScaleAbsolute(200, 200);
+                            image.Alignment = Element.ALIGN_CENTER;
+                            document.Add(image);
+                        }
+
+
+
+
+                        // Đóng file PDF
+                        document.Close();
+                        MessageBox.Show("In vé xem phim thành công!");
+                    }
+                }
+
+            }
         }
     }
 }

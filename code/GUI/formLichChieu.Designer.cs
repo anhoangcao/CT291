@@ -44,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaLC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGV = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnResetLC = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuaLC = new Guna.UI2.WinForms.Guna2Button();
@@ -117,7 +116,6 @@
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.guna2Button3);
             this.guna2GroupBox1.Controls.Add(this.txtMaLC);
-            this.guna2GroupBox1.Controls.Add(this.txtTT);
             this.guna2GroupBox1.Controls.Add(this.txtGV);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
@@ -285,30 +283,6 @@
             this.txtMaLC.SelectedText = "";
             this.txtMaLC.Size = new System.Drawing.Size(194, 31);
             this.txtMaLC.TabIndex = 33;
-            // 
-            // txtTT
-            // 
-            this.txtTT.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtTT.BorderRadius = 4;
-            this.txtTT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTT.DefaultText = "";
-            this.txtTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(51)))));
-            this.txtTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTT.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtTT.ForeColor = System.Drawing.Color.Silver;
-            this.txtTT.HoverState.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtTT.Location = new System.Drawing.Point(503, 154);
-            this.txtTT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTT.Name = "txtTT";
-            this.txtTT.PasswordChar = '\0';
-            this.txtTT.PlaceholderText = "";
-            this.txtTT.SelectedText = "";
-            this.txtTT.Size = new System.Drawing.Size(194, 31);
-            this.txtTT.TabIndex = 33;
             // 
             // txtGV
             // 
@@ -481,7 +455,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThemLC;
         private Guna.UI2.WinForms.Guna2PictureBox btnSearchLC;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchLC;
-        private Guna.UI2.WinForms.Guna2TextBox txtTT;
         private Guna.UI2.WinForms.Guna2ComboBox cbxPhim;
         private System.Windows.Forms.Label label7;
     }

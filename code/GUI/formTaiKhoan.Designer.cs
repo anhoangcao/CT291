@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.BtnDongTK = new Guna.UI2.WinForms.Guna2Button();
             this.cbxPQ = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbxMaNV = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnXoaTK = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInsertTK = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnXoaTK = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInsertTK = new Guna.UI2.WinForms.Guna2Button();
             this.dtgvAccount = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnResetTK = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
@@ -94,7 +94,7 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GroupBox1.Controls.Add(this.BtnDong);
+            this.guna2GroupBox1.Controls.Add(this.BtnDongTK);
             this.guna2GroupBox1.Controls.Add(this.cbxPQ);
             this.guna2GroupBox1.Controls.Add(this.cbxMaNV);
             this.guna2GroupBox1.Controls.Add(this.label4);
@@ -113,6 +113,24 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(729, 170);
             this.guna2GroupBox1.TabIndex = 58;
             this.guna2GroupBox1.Text = "Thông tin tài khoản";
+            // 
+            // BtnDongTK
+            // 
+            this.BtnDongTK.BorderRadius = 5;
+            this.BtnDongTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnDongTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnDongTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnDongTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnDongTK.FillColor = System.Drawing.Color.Tomato;
+            this.BtnDongTK.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnDongTK.ForeColor = System.Drawing.Color.White;
+            this.BtnDongTK.Location = new System.Drawing.Point(649, 7);
+            this.BtnDongTK.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnDongTK.Name = "BtnDongTK";
+            this.BtnDongTK.Size = new System.Drawing.Size(73, 31);
+            this.BtnDongTK.TabIndex = 45;
+            this.BtnDongTK.Text = "Đóng";
+            this.BtnDongTK.Click += new System.EventHandler(this.BtnDongTK_Click);
             // 
             // cbxPQ
             // 
@@ -152,40 +170,6 @@
             this.cbxMaNV.Name = "cbxMaNV";
             this.cbxMaNV.Size = new System.Drawing.Size(133, 36);
             this.cbxMaNV.TabIndex = 44;
-            // 
-            // btnXoaTK
-            // 
-            this.btnXoaTK.BorderRadius = 5;
-            this.btnXoaTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoaTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoaTK.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnXoaTK.ForeColor = System.Drawing.Color.White;
-            this.btnXoaTK.Location = new System.Drawing.Point(424, 259);
-            this.btnXoaTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaTK.Name = "btnXoaTK";
-            this.btnXoaTK.Size = new System.Drawing.Size(146, 31);
-            this.btnXoaTK.TabIndex = 61;
-            this.btnXoaTK.Text = "Xóa tài khoản";
-            this.btnXoaTK.Click += new System.EventHandler(this.btnXoaTK_Click);
-            // 
-            // btnInsertTK
-            // 
-            this.btnInsertTK.BorderRadius = 5;
-            this.btnInsertTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsertTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsertTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInsertTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInsertTK.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnInsertTK.ForeColor = System.Drawing.Color.White;
-            this.btnInsertTK.Location = new System.Drawing.Point(87, 259);
-            this.btnInsertTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInsertTK.Name = "btnInsertTK";
-            this.btnInsertTK.Size = new System.Drawing.Size(146, 31);
-            this.btnInsertTK.TabIndex = 60;
-            this.btnInsertTK.Text = "Thêm tài khoản";
-            this.btnInsertTK.Click += new System.EventHandler(this.btnInsertTK_Click);
             // 
             // label4
             // 
@@ -284,40 +268,74 @@
             this.txtUserName.Size = new System.Drawing.Size(170, 31);
             this.txtUserName.TabIndex = 30;
             // 
+            // btnXoaTK
+            // 
+            this.btnXoaTK.BorderRadius = 5;
+            this.btnXoaTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaTK.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnXoaTK.ForeColor = System.Drawing.Color.White;
+            this.btnXoaTK.Location = new System.Drawing.Point(424, 259);
+            this.btnXoaTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoaTK.Name = "btnXoaTK";
+            this.btnXoaTK.Size = new System.Drawing.Size(146, 31);
+            this.btnXoaTK.TabIndex = 61;
+            this.btnXoaTK.Text = "Xóa tài khoản";
+            this.btnXoaTK.Click += new System.EventHandler(this.btnXoaTK_Click);
+            // 
+            // btnInsertTK
+            // 
+            this.btnInsertTK.BorderRadius = 5;
+            this.btnInsertTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsertTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsertTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInsertTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInsertTK.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnInsertTK.ForeColor = System.Drawing.Color.White;
+            this.btnInsertTK.Location = new System.Drawing.Point(87, 259);
+            this.btnInsertTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsertTK.Name = "btnInsertTK";
+            this.btnInsertTK.Size = new System.Drawing.Size(146, 31);
+            this.btnInsertTK.TabIndex = 60;
+            this.btnInsertTK.Text = "Thêm tài khoản";
+            this.btnInsertTK.Click += new System.EventHandler(this.btnInsertTK_Click);
+            // 
             // dtgvAccount
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.dtgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvAccount.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvAccount.ColumnHeadersHeight = 30;
             this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvAccount.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvAccount.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvAccount.Location = new System.Drawing.Point(87, 297);
             this.dtgvAccount.Name = "dtgvAccount";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvAccount.RowHeadersVisible = false;
             this.dtgvAccount.Size = new System.Drawing.Size(729, 166);
             this.dtgvAccount.TabIndex = 61;
@@ -359,23 +377,6 @@
             this.btnResetTK.TabIndex = 63;
             this.btnResetTK.Text = "Đặt lại";
             this.btnResetTK.Click += new System.EventHandler(this.btnResetTK_Click);
-            // 
-            // BtnDong
-            // 
-            this.BtnDong.BorderRadius = 5;
-            this.BtnDong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnDong.FillColor = System.Drawing.Color.Tomato;
-            this.BtnDong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnDong.ForeColor = System.Drawing.Color.White;
-            this.BtnDong.Location = new System.Drawing.Point(649, 7);
-            this.BtnDong.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnDong.Name = "BtnDong";
-            this.BtnDong.Size = new System.Drawing.Size(73, 31);
-            this.BtnDong.TabIndex = 45;
-            this.BtnDong.Text = "Đóng";
             // 
             // btnUpdateTK
             // 
@@ -439,7 +440,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvAccount;
         private Guna.UI2.WinForms.Guna2Button btnResetTK;
-        private Guna.UI2.WinForms.Guna2Button BtnDong;
+        private Guna.UI2.WinForms.Guna2Button BtnDongTK;
         private Guna.UI2.WinForms.Guna2Button btnUpdateTK;
     }
 }

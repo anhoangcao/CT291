@@ -40,7 +40,7 @@ namespace GUI
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            formMain fMain = new formMain();
+            formMainNV fMain = new formMainNV();
             this.Hide();
             fMain.ShowDialog();
             this.Show();
